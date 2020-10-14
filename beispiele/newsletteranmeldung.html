@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+-Praktikum DBWT. Autoren:
+-Schmidt, Philip,
+-Woitzyk, Nicolas, 3187694
+-->
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Newsletteranmeldung</title>
+
+</head>
+<body>
+<style>
+    body{
+        font-family: "Comic Sans MS"
+    }
+</style>
+<ul>
+    <p style="font-family:Comic Sans MS">
+    <h3>Anmeldung</h3>
+
+    <h4>Anrede</h4>
+    <input type="radio" name="geschlecht" value="weiberl"> Frau <br>
+    <input type="radio" name="geschlecht" value="manderl"> Herr <br><br>
+
+    <label for="vname">Vorname*</label> <br>
+    <input id="vname" size="30" maxlength="30" required> <br>
+    <label for="nname">Nachname*</label><br>
+    <input id="nname" size="30" maxlength="30" required> <br>
+    <label for="email">E-Mail*</label><br>
+    <input id="email" size="30" maxlength="30" required><br><br>
+
+    <select class="w3-select" name="option">
+        <option value="" disabled selected>Benachrichtigungsintervall</option>
+        <option value="1">Default</option>
+        <option value="1">Tag</option>
+        <option value="2">Woche</option>
+        <option value="3">Monat</option>
+    </select>
+
+        <br>
+        <br>
+
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        Datenschutzhinweise gelesen <br><br>
+
+        <button class="w3-button w3-round-xxlarge">Abschicken</button>
+
+        <br>
+
+        <sup>*)</sup> Eingaben sind Pflicht
+    </p>
+
+</ul>
+
+</body>
+</html>
+
+
+<!--<p style="font-family:Comic Sans MS">Hello, I am Arial!</p>
