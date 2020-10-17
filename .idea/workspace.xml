@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/beispiele/m1_8a_text.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/werbeseite/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/m1_4a_textauszeichnung.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_4a_textauszeichnung.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1isgeOnteUNWHFeFtF9XCkv4J7v" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -55,8 +59,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.newsletteranmeldung.html">
+  <component name="RunManager" selected="JavaScript Debug.m1_8a_text.html">
     <configuration name="m1_4a_textauszeichnung.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DBWT/beispiele/m1_4a_textauszeichnung.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="m1_8a_text.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DBWT/beispiele/m1_8a_text.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="newsletteranmeldung.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DBWT/beispiele/newsletteranmeldung.html" useBuiltInWebServerPort="true">
@@ -64,6 +71,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.m1_8a_text.html" />
         <item itemvalue="JavaScript Debug.newsletteranmeldung.html" />
         <item itemvalue="JavaScript Debug.m1_4a_textauszeichnung.html" />
       </list>
@@ -79,7 +87,8 @@
       <updated>1602701807818</updated>
       <workItem from="1602701808860" duration="4124000" />
       <workItem from="1602838379184" duration="1210000" />
-      <workItem from="1602868469742" duration="1700000" />
+      <workItem from="1602868469742" duration="1971000" />
+      <workItem from="1602923393626" duration="893000" />
     </task>
     <servers />
   </component>
@@ -99,9 +108,9 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602704624097">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602870386753">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602704624097" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602870386753" />
   </component>
 </project>
