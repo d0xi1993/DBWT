@@ -20,13 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/beispiele/css_table (1).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele/m1_8b_layout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/m1_8a_text.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_8a_text.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beispiele/css_table (1).html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/css_table (1).html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beispiele/newsletteranmeldung.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/newsletteranmeldung.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/m1_4a_textauszeichnung.html" beforeDir="false" afterPath="$PROJECT_DIR$/m1_4a_textauszeichnung.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +60,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.m1_8b_layout.html">
+  <component name="RunManager" selected="JavaScript Debug.css_table (1).html">
+    <configuration name="css_table (1).html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DBWT/beispiele/css_table (1).html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="m1_4a_textauszeichnung.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DBWT/beispiele/m1_4a_textauszeichnung.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -79,10 +78,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.css_table (1).html" />
+        <item itemvalue="JavaScript Debug.newsletteranmeldung.html" />
         <item itemvalue="JavaScript Debug.m1_8b_layout.html" />
         <item itemvalue="JavaScript Debug.m1_8a_text.html" />
         <item itemvalue="JavaScript Debug.m1_4a_textauszeichnung.html" />
-        <item itemvalue="JavaScript Debug.newsletteranmeldung.html" />
       </list>
     </recent_temporary>
   </component>
@@ -102,7 +102,7 @@
       <workItem from="1603013509899" duration="5309000" />
       <workItem from="1603037204608" duration="3949000" />
       <workItem from="1603050749233" duration="1221000" />
-      <workItem from="1603094378173" duration="1607000" />
+      <workItem from="1603094378173" duration="8604000" />
     </task>
     <servers />
   </component>
@@ -173,10 +173,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="344" key="GridCell.Tab.2.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603019366806" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603094384555">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603123932469">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603094384555" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603123932469" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603122763887">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603122763887" />
     <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1603019102284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

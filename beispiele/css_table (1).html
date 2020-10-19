@@ -5,6 +5,42 @@
     <title>CSS Übung</title>
     <style type="text/css">
 
+
+        #etabelle{
+            font-family: "Comic Sans MS";
+            border-collapse: collapse;
+            border: coral;
+            width: 75%;
+
+
+        }
+
+        #etabelle td, #etabelle th{
+            border: 1px solid #dddddd;
+            padding: 8px;
+
+        }
+        #etabelle tr{
+            border-left: 3px solid coral;
+            border-right: 3px solid coral;
+        }
+
+        #etabelle th{
+            padding-top: initial;       /* das ist der Platz der für die erste Zeile der Tablle nach oben hin zusätzlich gemacht werden soll*/
+            padding-bottom: initial;    /* das ist der Platz der für die erste Zeile der Tablle nach unten hin zusätzlich gemacht werden soll*/
+            text-align: center;         /*Ausrichtung des textes zum rand oder zentral*/
+            background-color: burlywood;
+            color: black;
+
+        }
+
+        #etabelle tr:nth-child(even){background-color: burlywood;}
+
+
+        #etabelle tr:hover {background-color: #ddd;}  /*--markiert die Zelle wenn ich mit der maus -->*/
+
+
+
     </style>
 
     <head>
@@ -16,8 +52,8 @@
 <main>
     <!-- das <div> in <main> aus Part 1 hier einfügen, um die komplette Webseite zu erhalten -->
     <div class="elektro zeile">
-        <h1 id="elektro">Wofür steht das E in E-Mensa?</h1>
-        <p>Am besten zeigt man das in einer <a href="#etabelle">Tabelle</a>.</p>
+        <h1 id="elektro" style="font-family: 'Comic Sans MS'">Wofür steht das E in E-Mensa?</h1>
+        <p style="font-family: 'Comic Sans MS'">Am besten zeigt man das in einer <a href="#etabelle" style="font-family: 'Comic Sans MS'; color: coral">Tabelle</a>.</p>
         <table id="etabelle">
             <thead>
             <tr>
