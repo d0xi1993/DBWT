@@ -22,7 +22,6 @@
     <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beispiele/css_table (1).html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/css_table (1).html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/newsletteranmeldung.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/newsletteranmeldung.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +101,7 @@
       <workItem from="1603013509899" duration="5309000" />
       <workItem from="1603037204608" duration="3949000" />
       <workItem from="1603050749233" duration="1221000" />
-      <workItem from="1603094378173" duration="8604000" />
+      <workItem from="1603094378173" duration="11583000" />
     </task>
     <servers />
   </component>

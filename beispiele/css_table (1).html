@@ -6,39 +6,49 @@
     <style type="text/css">
 
 
-        #etabelle{
+        #etabelle {
             font-family: "Comic Sans MS";
             border-collapse: collapse;
-            border: coral;
             width: 75%;
-
-
         }
 
-        #etabelle td, #etabelle th{
+        #etabelle td, #etabelle th {
             border: 1px solid #dddddd;
             padding: 8px;
 
         }
-        #etabelle tr{
+
+        #etabelle tr {
+
             border-left: 3px solid coral;
             border-right: 3px solid coral;
+
+
+
         }
 
-        #etabelle th{
-            padding-top: initial;       /* das ist der Platz der für die erste Zeile der Tablle nach oben hin zusätzlich gemacht werden soll*/
-            padding-bottom: initial;    /* das ist der Platz der für die erste Zeile der Tablle nach unten hin zusätzlich gemacht werden soll*/
-            text-align: center;         /*Ausrichtung des textes zum rand oder zentral*/
+        #etabelle th {
+            padding-top: initial; /* das ist der Platz der für die erste Zeile der Tablle nach oben hin zusätzlich gemacht werden soll*/
+            padding-bottom: initial; /* das ist der Platz der für die erste Zeile der Tablle nach unten hin zusätzlich gemacht werden soll*/
+            text-align: center; /*Ausrichtung des textes zum rand oder zentral*/
             background-color: burlywood;
             color: black;
 
+
         }
 
-        #etabelle tr:nth-child(even){background-color: burlywood;}
+        #etabelle tr:nth-child(even) {
+            background-color: burlywood;
+        }
+
+        /*einfärben immer abwechselnd */
 
 
-        #etabelle tr:hover {background-color: #ddd;}  /*--markiert die Zelle wenn ich mit der maus -->*/
+        #etabelle tr:hover {
+            background-color: #ddd;
+        }
 
+        /*--markiert die Zelle wenn ich mit der maus -->*/
 
 
     </style>
@@ -53,13 +63,15 @@
     <!-- das <div> in <main> aus Part 1 hier einfügen, um die komplette Webseite zu erhalten -->
     <div class="elektro zeile">
         <h1 id="elektro" style="font-family: 'Comic Sans MS'">Wofür steht das E in E-Mensa?</h1>
-        <p style="font-family: 'Comic Sans MS'">Am besten zeigt man das in einer <a href="#etabelle" style="font-family: 'Comic Sans MS'; color: coral">Tabelle</a>.</p>
+        <p style="font-family: 'Comic Sans MS'">Am besten zeigt man das in einer <a href="#etabelle"
+                                                                                    style="font-family: 'Comic Sans MS'; color: coral">Tabelle</a>.
+        </p>
         <table id="etabelle">
             <thead>
             <tr>
-                <th>Bedeutung</th>
-                <th>Philosophie</th>
-                <th>Beispiele</th>
+                <th style="border-top: 3px solid coral">Bedeutung</th>
+                <th style="border-top: 3px solid coral">Philosophie</th>
+                <th style="border-top: 3px solid coral">Beispiele</th>
             </tr>
             </thead>
             <tbody>
@@ -88,9 +100,9 @@
                 </td>
             </tr>
             <tr>
-                <td>Effizient</td>
-                <td>Schnell, lecker und qualitativ</td>
-                <td>
+                <td style="border-bottom: 3px solid coral">Effizient</td>
+                <td style="border-bottom: 3px solid coral">Schnell, lecker und qualitativ</td>
+                <td style="border-bottom: 3px solid coral">
                     <ol>
                         <li class="pflicht">Frisch für Sie zubereitet, wann Sie es wollen</li>
                         <li class="pflicht">Die Zutaten sind nachverfolgbar und immer tiefgekühlt</li>
