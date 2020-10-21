@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/werbeseite/logo-FH.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/beispiele/css_table (1).html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/css_table (1).html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beispiele/m1_4a_textauszeichnung.html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/m1_4a_textauszeichnung.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,11 +62,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.css_table (1).html">
+  <component name="RunManager" selected="JavaScript Debug.newsletteranmeldung.html">
     <configuration name="css_table (1).html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DBWT/beispiele/css_table (1).html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="m1_4a_textauszeichnung.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DBWT/beispiele/m1_4a_textauszeichnung.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DBWT/werbeseite/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="m1_8a_text.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DBWT/beispiele/m1_8a_text.html" useBuiltInWebServerPort="true">
@@ -77,11 +80,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.css_table (1).html" />
         <item itemvalue="JavaScript Debug.newsletteranmeldung.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.css_table (1).html" />
         <item itemvalue="JavaScript Debug.m1_8b_layout.html" />
         <item itemvalue="JavaScript Debug.m1_8a_text.html" />
-        <item itemvalue="JavaScript Debug.m1_4a_textauszeichnung.html" />
       </list>
     </recent_temporary>
   </component>
@@ -102,6 +105,8 @@
       <workItem from="1603037204608" duration="3949000" />
       <workItem from="1603050749233" duration="1221000" />
       <workItem from="1603094378173" duration="11583000" />
+      <workItem from="1603203865149" duration="5000" />
+      <workItem from="1603274957317" duration="11106000" />
     </task>
     <servers />
   </component>

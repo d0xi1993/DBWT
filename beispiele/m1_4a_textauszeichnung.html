@@ -102,24 +102,24 @@ Request URL: https://www.fh-aachen.de/hochschule/bibliothek/   //Anfrageaddresse
 Request Method: GET                                            // Anfrage Methode GET : werden Ressourcen vom Server abgerufen
 Status Code: 200 OK                                            // Status Code: gibt Auskunft ob Fehler bestehen oder die Verbindung abgebrochen wurde
 Remote Address: 149.201.122.100:443                            //
-Referrer Policy: strict-origin-when-cross-origin
+Referrer Policy: strict-origin-when-cross-origin               //Wieviele Informationen werden über den header gesendet
 
 
-HTTP/1.1 200 OK
-Server: fhacDVZ/1.4.3 (fhacOS/MintFeet)
-Date: Fri, 16 Oct 2020 17:17:49 GMT
-Content-Type: image/svg+xml
-Last-Modified: Wed, 08 Jun 2016 13:36:29 GMT
-Connection: keep-alive
+HTTP/1.1 200 OK                                                //Antwort des Servers
+Server: fhacDVZ/1.4.3 (fhacOS/MintFeet)                        //Serverinfos
+Date: Fri, 16 Oct 2020 17:17:49 GMT                            // Datum
+Content-Type: image/svg+xml                                    //Inhalt
+Last-Modified: Wed, 08 Jun 2016 13:36:29 GMT                   //letzte Veränderung
+Connection: keep-alive                                         //Verbindungaufbau aufrecht halten
 ETag: "57581f5d-733"
 Accept-Ranges: bytes
 Strict-Transport-Security: max-age=31536000
 Transfer-Encoding: chunked
 
 6.2
-Request URL: http://localhost:63342/beispiele/formdata.html
-Request Method: POST
-Status Code: 404 Not Found
+Request URL: http://localhost:63342/beispiele/formdata.html     //Anfrageadresse
+Request Method: POST                                            //POST: schickt unbegrenzt, Mengen an Daten zur weiteren Verarbeitung zum Server, diese werdenals Inhalt der Nachricht übertragen
+Status Code: 404 Not Found                                      //4xx Client Fehler = 404 == Datei existiert nicht
 Remote Address: 127.0.0.1:63342
 Referrer Policy: strict-origin-when-cross-origin
 access-control-allow-credentials: true

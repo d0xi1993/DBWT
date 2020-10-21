@@ -5,9 +5,14 @@
     <title>CSS Übung</title>
     <style type="text/css">
 
+        body{
+            font-family: "Comic Sans MS";
+        }
 
         #etabelle {
-            font-family: "Comic Sans MS";
+            margin-left: auto;
+            margin-right: auto;
+
             border-collapse: collapse;
             width: 75%;
         }
@@ -22,8 +27,6 @@
 
             border-left: 3px solid coral;
             border-right: 3px solid coral;
-
-
 
         }
 
@@ -44,9 +47,39 @@
         /*einfärben immer abwechselnd */
 
 
-        #etabelle tr:hover {
+        #etabelle tr:hover {        /* "#" == id "." == class */
             background-color: #ddd;
         }
+        .center{
+            text-align: center;
+
+        }
+
+        footer{
+
+            border-top: coral 3px solid;
+        }
+
+        footer ul{
+
+            float: right;
+        }
+        footer li{
+            list-style-type: none;
+            display: inline;
+            border-right: coral 1px solid;
+            padding: 0px 20px;
+
+        }
+
+        footer li:last-child{
+            border-right: none;
+
+        }
+
+
+
+
 
         /*--markiert die Zelle wenn ich mit der maus -->*/
 
@@ -62,8 +95,8 @@
 <main>
     <!-- das <div> in <main> aus Part 1 hier einfügen, um die komplette Webseite zu erhalten -->
     <div class="elektro zeile">
-        <h1 id="elektro" style="font-family: 'Comic Sans MS'">Wofür steht das E in E-Mensa?</h1>
-        <p style="font-family: 'Comic Sans MS'">Am besten zeigt man das in einer <a href="#etabelle"
+        <h1 id="elektro" >Wofür steht das E in E-Mensa?</h1>
+        <p>Am besten zeigt man das in einer <a href="#etabelle"
                                                                                     style="font-family: 'Comic Sans MS'; color: coral">Tabelle</a>.
         </p>
         <table id="etabelle">
@@ -112,7 +145,7 @@
             </tr>
             </tbody>
         </table>
-        <p class="center">Da geht natürlich noch viel mehr, siehe nur <abbr title="Extra">E</abbr>.<br>Die Tabelle ist
+        <p class="center" >Da geht natürlich noch viel mehr, siehe nur <abbr title="Extra">E</abbr>.<br>Die Tabelle ist
             aber schon ganz schön imposant so oder?</p>
     </div>
 </main>
