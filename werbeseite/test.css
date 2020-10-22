@@ -1,0 +1,107 @@
+body {
+    font-family: "Comic Sans MS";
+}
+
+
+/*von hier*/
+table, th {
+    padding-right: 20px; /*Platz nach rechts damit die Tabelle nicht so gequetscht aussieht*/
+    border-collapse: collapse; /*Damit nicht um jedes Element ein Rand ist*/
+    border-style: solid; /*gestrichelt oder durchgezogene linie*/
+    border-color: black;
+    border: 2px solid black; /*rand stärke*/
+
+
+}
+
+td { /*macht ein rand */
+    padding-right: 20px;
+    text-align: center; /*zentriert die schrift in den zellen*/
+    border: 1px solid black;
+
+}
+
+#menüliste { /*zentrieren der Tabelle*/
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*bis hier tabelle*/
+
+.n {
+    display: inline-block;
+    color: #b0aeae;
+}
+
+/*ab hier kommt ph stoff*/
+.zahlen ul{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    list-style: none;
+
+}
+.Wichtig{
+    list-style-position: inside;
+}body{
+     text-align: center;
+ }
+
+.content-body{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+nav{
+    background-color: deeppink;
+}
+.navbar{
+    width: 100%;
+    column-gap: 5px;
+
+    display: inline;
+    list-style: none;
+    min-height: 84px;
+
+
+}
+
+.logo{
+    width: 200px;
+}
+/*.navbar ul{
+    float: left;
+}*/
+.navbar li {
+    display: inline;
+    padding: 20px;
+}
+
+.zahlen ul{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    list-style: none;
+
+}
+.Wichtig{
+    list-style-position: inside;
+}
+footer{
+    border-top: 1px solid #ff1493;
+    padding-top: 10px;
+}
+
+footer ul{
+    display: inline;
+    list-style: none;
+    padding: 10px;
+
+
+}
+footer li{
+    display: inline;
+    padding: 10px;
+    border-right: deeppink 1px solid;
+}
+footer li:last-child{
+    border-right: none;
+}

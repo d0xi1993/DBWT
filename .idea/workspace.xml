@@ -20,9 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/werbeseite/ph.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/werbeseite/test.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/css_table (1).html" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele/css_table (1).html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/werbeseite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -59,9 +59,10 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.ka.html">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration name="css_table (1).html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DBWT/beispiele/css_table (1).html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -79,11 +80,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.ka.html" />
         <item itemvalue="JavaScript Debug.css_table (1).html" />
         <item itemvalue="JavaScript Debug.newsletteranmeldung.html" />
         <item itemvalue="JavaScript Debug.m1_4a_textauszeichnung.html" />
-        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -106,7 +107,7 @@
       <workItem from="1603094378173" duration="11583000" />
       <workItem from="1603203865149" duration="5000" />
       <workItem from="1603274957317" duration="15170000" />
-      <workItem from="1603373704207" duration="14910000" />
+      <workItem from="1603373704207" duration="16843000" />
     </task>
     <servers />
   </component>
