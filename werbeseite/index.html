@@ -5,9 +5,11 @@
     <title>E-Mensa</title>
 </head>
 <body>
-<img src="logo-FH.png" alt="" width="25" height="85">
+<li><img src="logo-FH.png" alt="" width="25" height="85"></li>
 
+<div class="reiter">
 <ul>
+
     <li id="ankuendigung">Ankündigung</li>
     <li id="speisen">Speisen</li>
     <li id="zahlen">Zahlen</li>
@@ -15,8 +17,78 @@
     <li id="wichtig">Wichtig für uns</li>
 
 </ul>
+</div>
+
+<div class="ankuendigung">
+     <h2>Ankündigungen</h2>
+</div>
+<br>
+<div class="speisen">
+    <h2>Köstlichkeiiten, die Sie erwarten</h2>
+    <table id="menüliste">
+        <thead>
+        <tr>
+            <th>Gericht</th> <!--Oben links leer in Essenstabelle -->
+            <th>Preis intern</th>
+            <th>Preis extern</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Schnitzel</td>
+            <td>1,2</td>
+            <td>2,4</td>
+        </tr>
+        <tr>
+            <td>Pommes root wieß</td>
+            <td>0,8</td>
+            <td>1,6</td>
+        </tr>
+        <tr>
+            <td >Gyros komplett</td>
+            <td >5</td>
+            <td >10</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+<h2>Interesse geweckt? wir informieren Sie !</h2>
+<ul>
 
 
+
+        <li>
+            <label for="vname">Vorname*</label> <br>
+            <input id="vname" name="vname" size="10" maxlength="30" required> <br>
+        </li>
+
+        <li>
+            <label for="email">E-Mail*</label><br>
+            <input id="email" name="email" size="10" maxlength="30" required><br><br>
+        </li>
+
+        <select class="select" name="option">
+            <option value="" disabled selected>Newsletter bitte in:</option>
+            <option value="de">Deutsch</option>
+            <option value="en">Englisch</option>
+        </select>
+
+        <br>
+        <br>
+
+        <label class="switch">
+            <input type="checkbox" required>
+            <span class="slider round"></span>
+        </label>
+        Datenschutzhinweise gelesen <br>
+
+        <button type="" id="userdata" class="w3-button">Zum Newsletter Anmelden</button>
+
+        <br>
+
+    </form>
+</ul>
 
 <footer>
     <ul>
