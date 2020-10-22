@@ -3,32 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <title>E-Mensa</title>
+    <style>
+
+        body {
+            font-family: "Comic Sans MS";
+        }
+
+
+        /*von hier*/
+        table, th {
+            padding-right: 20px; /*Platz nach rechts damit die Tabelle nicht so gequetscht aussieht*/
+            border-collapse: collapse; /*Damit nicht um jedes Element ein Rand ist*/
+            border-style: solid; /*gestrichelt oder durchgezogene linie*/
+            border-color: black;
+            border: 2px solid black; /*rand stärke*/
+
+
+        }
+
+        td { /*macht ein rand */
+            padding-right: 20px;
+            text-align: center; /*zentriert die schrift in den zellen*/
+            border: 1px solid black;
+
+        }
+
+        #menüliste { /*zentrieren der Tabelle*/
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        /*bis hier tabelle*/
+
+        .n {
+            display: inline-block;
+            color: #b0aeae;
+        }
+
+/*ab hier kommt ph stoff*/
+        .zahlen ul{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            list-style: none;
+
+        }
+        .Wichtig{
+            list-style-position: inside;
+        }
+        footer{
+            border-top: 1px solid #ff1493;
+            padding-top: 10px;
+        }
+
+        footer ul{
+            display: inline;
+            list-style: none;
+            padding: 10px;
+
+
+        }
+        footer li{
+            display: inline;
+            padding: 10px;
+        }
+
+    </style>
 </head>
 <body>
 <li><img src="logo-FH.png" alt="" width="25" height="85"></li>
 
 <div class="reiter">
-<ul>
+    <nav>
 
-    <li id="ankuendigung">Ankündigung</li>
-    <li id="speisen">Speisen</li>
-    <li id="zahlen">Zahlen</li>
-    <li id="kontakt">Kontakt</li>
-    <li id="wichtig">Wichtig für uns</li>
+        <a id="ankuendigung">Ankündigung</a>
+        <a id="speisen">Speisen</a>
+        <a id="zahlen">Zahlen</a>
+        <a id="kontakt">Kontakt</a>
+        <a id="wichtig">Wichtig für uns</a>
 
-</ul>
+    </nav>
 </div>
 
 <div class="ankuendigung">
-     <h2>Ankündigungen</h2>
+    <h2>Ankündigungen</h2>
 </div>
 <br>
 <div class="speisen">
-    <h2>Köstlichkeiiten, die Sie erwarten</h2>
+    <h2>Köstlichkeiten, die Sie erwarten</h2>
     <table id="menüliste">
         <thead>
+
         <tr>
-            <th>Gericht</th> <!--Oben links leer in Essenstabelle -->
+            <th></th> <!--Oben links leer in Essenstabelle -->
             <th>Preis intern</th>
             <th>Preis extern</th>
         </tr>
@@ -45,50 +111,59 @@
             <td>1,6</td>
         </tr>
         <tr>
-            <td >Gyros komplett</td>
-            <td >5</td>
-            <td >10</td>
+            <td>Gyros komplett</td>
+            <td>5</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>...</td>
+            <td>...</td>
+            <td>...</td>
         </tr>
         </tbody>
     </table>
 </div>
 <br>
+
+<h2>E-Mensa in Zahlen</h2>
+
 <h2>Interesse geweckt? wir informieren Sie !</h2>
-<ul>
+
+<form class="newsl">
 
 
+    <div class="n">
+        <label for="name">Ihr Name:</label> <br>
+        <input placeholder="Name" id="name" name="name" size="10" maxlength="auto">
+    </div>
 
-        <li>
-            <label for="vname">Vorname*</label> <br>
-            <input id="vname" name="vname" size="10" maxlength="30" required> <br>
-        </li>
+    <div class="n">
+        <label for="email">E-Mail:</label><br>
+        <input id="email" name="email" size="10" maxlength="auto">
+    </div>
 
-        <li>
-            <label for="email">E-Mail*</label><br>
-            <input id="email" name="email" size="10" maxlength="30" required><br><br>
-        </li>
+    <div class="n">
+    <select class="select" name="option">
+        <option value="" >Newsletter bitte in:</option>
+        <option value="en">englisch</option>
+        <option value="de">deutsch</option>
+    </select>
+    </div>
 
-        <select class="select" name="option">
-            <option value="" disabled selected>Newsletter bitte in:</option>
-            <option value="de">Deutsch</option>
-            <option value="en">Englisch</option>
-        </select>
+    <div class="n">
+    <label class="switch">
+        <input type="checkbox" required>
+        <span class="slider round"></span>
+    </label>
+    Datenschutzhinweise gelesen
+    </div>
 
-        <br>
-        <br>
+    <button type="submit" id="getnews" class="button">Zum Newsletter anmelden</button>
 
-        <label class="switch">
-            <input type="checkbox" required>
-            <span class="slider round"></span>
-        </label>
-        Datenschutzhinweise gelesen <br>
+    <br>
 
-        <button type="" id="userdata" class="w3-button">Zum Newsletter Anmelden</button>
+</form>
 
-        <br>
-
-    </form>
-</ul>
 
 <footer>
     <ul>
