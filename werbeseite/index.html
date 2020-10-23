@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
 - Praktikum DBWT Autoren:
-- Nico Woitzyk 3187694
+- Nicolas Woitzyk 3187694
 - Philip Schmidt 3236291
 -->
 <html lang="de">
@@ -22,7 +22,7 @@
 
 
     <ul class="navbar">
-        <li><a class="logo"><img src="logo-FH.png" height="80px" width="40px" role="90"></a></li>
+        <li><a class="logo"><img src="logo-FH.png" alt="Das Bild ist leider momentan nicht Verfügbar" height="80" width="40" ></a></li>
         <li><a href="#Ankündigung">Ankündigung</a></li>
         <li><a href="#Speisen">Speisen</a></li>
         <li><a href="#Zahlen">Zahlen</a></li>
@@ -35,7 +35,7 @@
 
 
     <br>
-    <a name="Ankündigung"></a>
+    <a id="Ankündigung"></a>    <!--id statt name, name wirft ein fehler raus (vermutlich veraltet)-->
     <div class="ankuendigung">
         <h2>Ankündigungen</h2>
         <br>
@@ -43,7 +43,7 @@
     </div>
     <br><br>
 
-    <a name="Speisen"></a>
+    <a id="Speisen"></a>        <!--id statt name, name wirft ein fehler raus (vermutlich veraltet)-->
     <div class="speisen">
         <h2>Köstlichkeiten, die Sie erwarten</h2>
         <table id="menüliste">
@@ -83,7 +83,7 @@
 
 
     <!-- zahlen der E-Mensa-->
-    <a name="Zahlen"></a>
+    <a id="Zahlen"></a>       <!--id statt name, name wirft ein fehler raus (vermutlich veraltet)-->
     <div class="zahlen">
         <h2>E-Mensa in Zahlen</h2>
 
@@ -96,7 +96,7 @@
     <br><br>
 
 
-    <a name="Kontakt"></a>
+    <a id="Kontakt"></a>            <!--id statt name, name wirft ein fehler raus (vermutlich veraltet)-->
     <h2>Interesse geweckt? wir informieren Sie !</h2>
 
     <form class="newsl">
@@ -104,21 +104,22 @@
 
         <div class="n">
             <label for="name">Ihr Name:</label> <br>
-            <input placeholder="Name" id="name" name="name" size="15" maxlength="auto">
+            <input placeholder="Name" id="name" name="name" size="15">
         </div>
 
         <div class="n">
             <label for="email">E-Mail:</label><br>
-            <input id="email" name="email" size="15" maxlength="auto">
+            <input id="email" name="email" size="15">
         </div>
 
         <div class="n">
             <select class="select" name="option">
-                <option value="" >Newsletter bitte in:</option>
+                <option value="">Newsletter bitte in:</option>
                 <option value="en">englisch</option>
                 <option value="de">deutsch</option>
             </select>
-        </div><br>
+        </div>
+        <br>
 
         <div class="n">
             <label class="switch">
@@ -128,7 +129,7 @@
             Datenschutzhinweise gelesen
         </div>
 
-        <button type="submit" id="getnews" class="button">Zum Newsletter anmelden</button>
+        <button type="submit" id="getnews" class="button" disabled>Zum Newsletter anmelden</button>
 
         <br>
 
@@ -136,7 +137,7 @@
     <br><br>
     <!--- Was uns wichtig ist-->
 
-    <a name="Wichtig"></a>
+    <a id="Wichtig"></a>                <!--id statt name, name wirft ein fehler raus (vermutlich veraltet)-->
     <div class="Wichtig">
         <h2>Das ist uns wichtig</h2>
 
@@ -148,9 +149,14 @@
     </div>
     <br><br>
 
-    <div class="abschluss">
-        <h2>Wir freuen uns auf Ihren Besuch!</h2>
-    </div>
+
+    <div class="container"><!---->
+        <div class="abschluss" id="trans">
+            <h2>Wir freuen uns auf Ihren Besuch!</h2>
+        </div>
+    </div><!---->
+
+
 </div>
 <footer>
     <ul>

@@ -1,7 +1,30 @@
 body {
     font-family: "Comic Sans MS";
+    border-left: 5cm solid bisque;
+    border-right: 5cm solid bisque;
+    border-collapse: collapse;
+}
+/*Üben*/
+
+.container{                  /*Verhältnis von container zu panel*/
+    perspective: 500px;
 }
 
+.panel {
+    transition: transform ease-in-out 10000ms;
+}
+
+#trans:hover{
+    transform: translateZ(100px);
+
+}
+
+
+
+
+
+
+/*Üben*/
 
 /*von hier*/
 table, th {
@@ -42,9 +65,12 @@ td { /*macht ein rand */
 }
 .Wichtig{
     list-style-position: inside;
-}body{
+}
+
+body{
      text-align: center;
  }
+
 
 .content-body{
     margin-left: 20%;
@@ -52,9 +78,11 @@ td { /*macht ein rand */
 }
 
 nav{
-    background-color: deeppink;
+    background-color: bisque;
 }
-.navbar{
+
+.navbar {
+
     width: 100%;
     column-gap: 5px;
 
@@ -62,8 +90,9 @@ nav{
     list-style: none;
     min-height: 84px;
 
-
 }
+
+
 
 .logo{
     width: 200px;
@@ -84,9 +113,11 @@ nav{
 }
 .Wichtig{
     list-style-position: inside;
+
 }
+
 footer{
-    border-top: 1px solid #ff1493;
+    border-top: 2px solid bisque;
     padding-top: 10px;
 }
 
@@ -100,7 +131,7 @@ footer ul{
 footer li{
     display: inline;
     padding: 10px;
-    border-right: deeppink 1px solid;
+    border-right: bisque 1px solid;
 }
 footer li:last-child{
     border-right: none;

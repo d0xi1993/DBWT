@@ -20,9 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/werbeseite/test.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/werbeseite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/ph.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/test.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +108,9 @@
       <workItem from="1603094378173" duration="11583000" />
       <workItem from="1603203865149" duration="5000" />
       <workItem from="1603274957317" duration="15170000" />
-      <workItem from="1603373704207" duration="16843000" />
+      <workItem from="1603373704207" duration="17086000" />
+      <workItem from="1603404635660" duration="6378000" />
+      <workItem from="1603441642919" duration="1372000" />
     </task>
     <servers />
   </component>
@@ -178,10 +181,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="344" key="GridCell.Tab.2.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603019366806" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603390122154">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603392779356">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603390122154" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603392779356" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603122763887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
