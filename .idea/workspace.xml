@@ -20,9 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Übung/Intro.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Übung/formular.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/werbeseite/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/werbeseite/ph.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/werbeseite/test.css" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/test.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +63,7 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html">
+  <component name="RunManager" selected="JavaScript Debug.css_table (1).html">
     <configuration name="css_table (1).html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DBWT/beispiele/css_table (1).html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -81,9 +81,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.css_table (1).html" />
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.ka.html" />
-        <item itemvalue="JavaScript Debug.css_table (1).html" />
         <item itemvalue="JavaScript Debug.newsletteranmeldung.html" />
         <item itemvalue="JavaScript Debug.m1_4a_textauszeichnung.html" />
       </list>
@@ -110,7 +110,7 @@
       <workItem from="1603274957317" duration="15170000" />
       <workItem from="1603373704207" duration="17086000" />
       <workItem from="1603404635660" duration="6378000" />
-      <workItem from="1603441642919" duration="1372000" />
+      <workItem from="1603441642919" duration="9203000" />
     </task>
     <servers />
   </component>
@@ -133,6 +133,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="260" y="265" key="FileChooserDialogImpl" timestamp="1603452024519">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="260" y="265" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603452024519" />
     <state width="1860" height="344" key="GridCell.Tab.0.bottom" timestamp="1603019366806">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -181,10 +185,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="344" key="GridCell.Tab.2.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603019366806" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603392779356">
+    <state x="314" y="443" key="NewPhpFileDialog" timestamp="1603453213035">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603392779356" />
+    <state x="314" y="443" key="NewPhpFileDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603453213035" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603443167047">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603443167047" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603122763887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

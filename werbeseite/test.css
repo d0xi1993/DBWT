@@ -4,7 +4,21 @@ body {
     border-right: 5cm solid bisque;
     border-collapse: collapse;
 }
-/*Üben*/
+
+/*Üben anfang*/
+nav li:hover{
+    background-color: burlywood;
+
+}
+nav li:first-child:hover{     /*damit das Bild nicht mit einem Hintergrund versehen wird wenn man drüber geht*/
+    background-color: unset;
+}
+
+a:link, a:visited{     /*wenn die Webseite oder der Link angeklickt wurde der Farbwechsel*/
+    color: #2196F3;
+}
+
+
 
 .container{                  /*Verhältnis von container zu panel*/
     perspective: 500px;
@@ -24,7 +38,7 @@ body {
 
 
 
-/*Üben*/
+/*Üben ende*/
 
 /*von hier*/
 table, th {
@@ -34,6 +48,11 @@ table, th {
     border-color: black;
     border: 2px solid black; /*rand stärke*/
 
+
+}
+
+table tr:hover{
+    background-color: bisque;
 
 }
 
