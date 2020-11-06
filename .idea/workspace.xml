@@ -26,25 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/beispiele_m1/css_table (1).html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele_m1/logo-FH.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele_m1/m1_4a_textauszeichnung.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele_m1/m1_8a_text.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele_m1/m1_8b_layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele_m1/newsletteranmeldung.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele_m1/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele_m2/erstesPHP.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/beispiele_m2/m2_Aufgabe_3/meal.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Übung/bs.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/css_table (1).html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/erstesPHP.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/logo-FH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/m1_4a_textauszeichnung.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/m1_8a_text.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/m1_8b_layout.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/newsletteranmeldung.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/beispiele/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/beispiele_m2/m2_Aufgabe_3/meal.php" beforeDir="false" afterPath="$PROJECT_DIR$/beispiele_m2/m2_Aufgabe_3/meal.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,6 +142,7 @@
       <workItem from="1604350897849" duration="724000" />
       <workItem from="1604486314862" duration="25878000" />
       <workItem from="1604586521402" duration="19146000" />
+      <workItem from="1604654349878" duration="7949000" />
     </task>
     <servers />
   </component>

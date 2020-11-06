@@ -26,38 +26,97 @@ $meal = [ // Kurzschreibweise für ein Array (entspricht = array())
     'allergens' => [11, 13],
     'amount' => 42   // Anzahl der verfügbaren Gerichte.
 ];
-
-$txts = [
-        'Gericht' => 'Meal',
+/*
+$lang = ['en' => [    //kann man das so machen?
+    'Gericht' => 'Meal',
     'Bewertungen' => 'Rating',
     'Insgesamt' => 'overall',
-    'Filter'=>'filter',
-    'Suchen'=>'search',
-    'Gerichtinfo'=>'menuinfo',
-    'einblenden'=>'show',
-    'preis'=>'price',
-    'intern'=>'intern',
-    'extern'=>'extern'
-
+    'Filter' => 'filter',
+    'Suchen' => 'search',
+    'Gerichtinfo' => 'menuinfo',
+    'einblenden' => 'show',
+    'preis' => 'price',
+    'intern' => 'intern',
+    'extern' => 'extern'
+],
+    'de' => [
+        'meal' => 'Gericht',
+        'Rating' => 'Bewertung',
+        'overall' => 'Ingesamt',
+        'filter' => 'Filter',
+        'search' => 'Suchen',
+        'menuinfo' => 'Gerichtinfo',
+        'show' => 'einblenden',
+        'price' => 'preis',
+        'intern' => 'intern',
+        'extern' => 'extern'
+    ]
 ];
-if (!empty($_GET['txts'])) {
 
 
-    $newValue = 0;
+
+if ($lang) {
+
+
+    $newWert = 0;
     $lang = "deutsch";
-    echo $meal['description'];
+    echo $lang['de'];
+
 
 } else {
+
+
+    $newWert = 1;
     $lang = "englisch";
-    $newValue = 1;
+    echo $_GET[$lang['en']];
+}
+*/
+$translations =
+    [
+        'de' =>
+            [
+                'meal_h1' => "Gericht: ",
+                'allergene_h1' => "Allergene",
+                'tb_allergene_th_nr' => "Allergen-Nr.",
+                'tb_allergene_th_desc' => "Beschreibung",
+                'ranking_h1' => "Bewertungen (Insgesamt: ",
+                'search_btn_text' => "Suchen",
+                'tb_rankings_desc' => "Text",
+                'tb_rankings_author' => "Autor",
+                'tb_rankings_stars' => "Sterne",
+            ],
+        'en' =>
+            [
+                'meal_h1' => "Meal: ",
+                'allergene_h1' => "Allergene",
+                'tb_allergene_th_nr' => "Allergene-Nr.",
+                'tb_allergene_th_desc' => "Description",
+                'ranking_h1' => "Feedback/Raking (Overall: ",
+                'search_btn_text' => "Serach",
+                'tb_rankings_desc' =>"Feedback",
+                'tb_rankings_author' =>"Author",
+                'tb_rankings_stars' =>"Stars",
+            ]
+    ];
+
+/*<?php echo $translations[$lang]['tb_allergene_th_nr']?>*/
+$lang = 'de';
+
+if (key_exists('lang', $_GET)){
+if(key_exists($_GET['lang'],$translations)){
+$lang =  $_GET['lang'];
+}
 }
 
-$string = serialize($txts);
-echo $string;
-echo "<form method='get' action='language'>
-                <input name='txts' value='{$newValue}'  hidden>
-                <input type='submit' value='{$lang}' name='language'>
-            </form>";
+echo "<form action='meal.php' method='get'>
+  <label for='language'>Diese Seite in einer anderen Sprache:</label>
+  <select id='language'>
+    <option lang='en' name='lang' href='?lang=en' value='en'>english</option>
+    <option lang='de' name='lang' href='?lang=de' value='de'>deutsch</option>
+  </select>
+  <button type='submit' name='sub_lang'>Ändern</button>
+</form>";
+
 
 
 
@@ -120,6 +179,7 @@ function calcMeanStars($ratings): float
 <html lang="de">
 <head>
     <meta charset="UTF-8"/>
+    <?php echo $translations[$lang]['meal_h1']?>
     <title>Gericht: <?php echo $meal['name']; ?></title>
     <style type="text/css">
         * {
@@ -143,8 +203,8 @@ function calcMeanStars($ratings): float
     </thead>
     <tbody>
     <tr> <!--Aufgabe 3h-->
-        <td><?php echo number_format($meal['price_intern'],2,",",".").'€'?></td>
-        <td><?php echo number_format($meal['price_extern'],2,",",".").'€' ?></td>
+        <td><?php echo number_format($meal['price_intern'], 2, ",", ".") . '€' ?></td>
+        <td><?php echo number_format($meal['price_extern'], 2, ",", ".") . '€' ?></td>
     </tr> <!--Aufgabe 3h-->
     </tbody>
 </table>
@@ -158,6 +218,7 @@ if (!empty($_GET['show_descr'])) {
     echo $meal['description'];
 
 } else {
+    $newValue = 1;
     $buttonText = "Gerichtinfo Einblenden";
     $newValue = 1;
 }
@@ -173,13 +234,12 @@ echo "<form method='get' action='meal.php'>
 ?>
 
 
-
 <!--3b Allergene-->
 
 <?php
 echo '<ul>';
 foreach ($meal[allergens] as $allergenNr) {
-    echo "<ol>".$allergensList[$allergenNr]."</ol>";
+    echo "<ol>" . $allergensList[$allergenNr] . "</ol>";
 }
 echo '</ul>';
 ?>
