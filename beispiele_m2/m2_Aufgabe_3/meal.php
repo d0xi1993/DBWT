@@ -26,99 +26,62 @@ $meal = [ // Kurzschreibweise für ein Array (entspricht = array())
     'allergens' => [11, 13],
     'amount' => 42   // Anzahl der verfügbaren Gerichte.
 ];
-/*
-$lang = ['en' => [    //kann man das so machen?
-    'Gericht' => 'Meal',
-    'Bewertungen' => 'Rating',
-    'Insgesamt' => 'overall',
-    'Filter' => 'filter',
-    'Suchen' => 'search',
-    'Gerichtinfo' => 'menuinfo',
-    'einblenden' => 'show',
-    'preis' => 'price',
-    'intern' => 'intern',
-    'extern' => 'extern'
-],
-    'de' => [
-        'meal' => 'Gericht',
-        'Rating' => 'Bewertung',
-        'overall' => 'Ingesamt',
-        'filter' => 'Filter',
-        'search' => 'Suchen',
-        'menuinfo' => 'Gerichtinfo',
-        'show' => 'einblenden',
-        'price' => 'preis',
-        'intern' => 'intern',
-        'extern' => 'extern'
-    ]
-];
 
 
-
-if ($lang) {
-
-
-    $newWert = 0;
-    $lang = "deutsch";
-    echo $lang['de'];
-
-
-} else {
-
-
-    $newWert = 1;
-    $lang = "englisch";
-    echo $_GET[$lang['en']];
-}
-*/
 $translations =
     [
         'de' =>
             [
-                'meal_h1' => "Gericht: ",
-                'allergene_h1' => "Allergene",
-                'tb_allergene_th_nr' => "Allergen-Nr.",
-                'tb_allergene_th_desc' => "Beschreibung",
-                'ranking_h1' => "Bewertungen (Insgesamt: ",
-                'search_btn_text' => "Suchen",
-                'tb_rankings_desc' => "Text",
-                'tb_rankings_author' => "Autor",
-                'tb_rankings_stars' => "Sterne",
+                'preis_'=>'Preis',
+                'change_' =>'Ändern',
+                'sprache' =>'Sprache ändern:' ,
+                'meal_' => "Gericht: ",
+                'allergene_' => "Allergene",
+                'ranking_' => "Bewertungen (Insgesamt: ",
+                'search_' => "Suchen",
+                'r_text' => "Text",
+                'r_author' => "Author",
+                'r_stars' => "Sterne",
             ],
         'en' =>
             [
-                'meal_h1' => "Meal: ",
-                'allergene_h1' => "Allergene",
-                'tb_allergene_th_nr' => "Allergene-Nr.",
-                'tb_allergene_th_desc' => "Description",
-                'ranking_h1' => "Feedback/Raking (Overall: ",
-                'search_btn_text' => "Serach",
-                'tb_rankings_desc' =>"Feedback",
-                'tb_rankings_author' =>"Author",
-                'tb_rankings_stars' =>"Stars",
+                'preis_'=>'price',
+                'change_' =>'Change',
+                'sprache' =>'Change language:' ,
+                'meal_' => "Meal: ",
+                'allergens_' => "Allergens",
+                'ranking_' => "Feedback/Raking (Overall: ",
+                'search_' => "Search",
+                'r_text' =>"Feedback",
+                'r_author' =>"Author",
+                'r_stars' =>"Stars",
             ]
     ];
 
-/*<?php echo $translations[$lang]['tb_allergene_th_nr']?>*/
 $lang = 'de';
 
-if (key_exists('lang', $_GET)){
-if(key_exists($_GET['lang'],$translations)){
-$lang =  $_GET['lang'];
+if (isset($_GET['lang'])){
+    if($_GET['lang'] == 'en'){
+        $lang='en';
+    }
+    if($_GET['lang'] == 'de'){
+        $lang='de';
+    }
+
 }
-}
+?>
 
-echo "<form action='meal.php' method='get'>
-  <label for='language'>Diese Seite in einer anderen Sprache:</label>
-  <select id='language'>
-    <option lang='en' name='lang' href='?lang=en' value='en'>english</option>
-    <option lang='de' name='lang' href='?lang=de' value='de'>deutsch</option>
-  </select>
-  <button type='submit' name='sub_lang'>Ändern</button>
-</form>";
+<form action="meal.php" method="get">
+    <label for="language"><?php echo $translations[$lang]['sprache'];?></label>
+    <select id="language" name="lang">
+        <option value="en">en</option>
+        <option value="de">de</option>
+    </select>
+    <button type="submit"  ><?php echo $translations[$lang]['change_'];?></button>
+</form>
 
 
-
+<?php
 
 
 $ratings = [
@@ -179,8 +142,7 @@ function calcMeanStars($ratings): float
 <html lang="de">
 <head>
     <meta charset="UTF-8"/>
-    <?php echo $translations[$lang]['meal_h1']?>
-    <title>Gericht: <?php echo $meal['name']; ?></title>
+    <title><?php echo $translations[$lang]['meal_'].$meal['name']; ?></title>
     <style type="text/css">
         * {
             font-family: Arial, serif;
@@ -192,13 +154,13 @@ function calcMeanStars($ratings): float
     </style>
 </head>
 <body>
-<h1>Gericht: <?php echo $meal['name']; ?></h1>
+<h1><?php echo $translations[$lang]['meal_'].$meal['name']; ?></h1>
 
 <table class="Preise">
     <thead>
     <tr>
-        <td>Preis Inter</td>
-        <td>Preis extern</td>
+        <td><?php echo $translations[$lang]['preis_'];?> inter</td>
+        <td><?php echo $translations[$lang]['preis_'];?> extern</td>
     </tr>
     </thead>
     <tbody>
@@ -235,21 +197,21 @@ echo "<form method='get' action='meal.php'>
 
 
 <!--3b Allergene-->
-
+<h2><?php echo $translations[$lang]['allergene_'];?></h2>
 <?php
-echo '<ul>';
-foreach ($meal[allergens] as $allergenNr) {
-    echo "<ol>" . $allergensList[$allergenNr] . "</ol>";
+
+foreach ($meal['allergens'] as $allergenNr) {
+    echo "<ul>" . $allergensList[$allergenNr] . "</ul>";
 }
-echo '</ul>';
+
 ?>
 
 <!--3b Allergene-->
 
-<h1>Bewertungen (Insgesamt: <?php echo calcMeanStars($ratings); ?>)</h1>
+<h1><?php echo $translations[$lang]['ranking_'] .calcMeanStars($ratings); ?>)</h1>
 
 <form method="get">
-    <label for="search_text">Filter:</label>
+    <label for="search_text">Filter: </label>
     <?php
     //Aufgabe 3f
     if (!empty($_GET['search_text'])) {
@@ -268,10 +230,9 @@ echo '</ul>';
 <table class="rating">
     <thead>
     <tr>
-        <td>Text</td>
-        <td>Author</td>    <!--3a Author der Bewertung-->
-        <td>Sterne</td>
-        <td>Preis</td>
+        <td><?php echo $translations[$lang]['r_text'] ?></td>
+        <td><?php echo $translations[$lang]['r_author'] ?></td>    <!--3a Author der Bewertung-->
+        <td><?php echo $translations[$lang]['r_stars'] ?></td>
     </tr>
     </thead>
     <tbody>
