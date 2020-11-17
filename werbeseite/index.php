@@ -116,7 +116,7 @@
     <a id="Kontakt"></a>            <!--id statt name, name wirft ein fehler raus (vermutlich veraltet)-->
     <h2>Interesse geweckt? wir informieren Sie !</h2>
 
-    <form class="newsl" method="post">
+    <form action='newsl_anzeigen.php' class="newsl" method="post">
 
         <fieldset>
 
@@ -141,7 +141,7 @@
 
             <div class="n">
                 <label class="switch">
-                    <input type="checkbox" required>
+                    <input name='dataCheck' type="checkbox" required>
                     <span class="slider round"></span>
                 </label>
                 Datenschutzhinweise gelesen

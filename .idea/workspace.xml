@@ -25,10 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment="aktuellste">
-      <change afterPath="$PROJECT_DIR$/werbeseite/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/werbeseite/nl-admin.php" afterDir="false" />
+    <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/werbeseite/newsname.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/nl-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/nl-admin.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +62,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mariadb" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -75,8 +77,10 @@
       <recent name="C:\Users\Nico\Desktop\Github\DBWT\beispiele_m2" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.m2_4d_array.php">
-    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DBWT/werbeseite/index.html" useBuiltInWebServerPort="true">
+  <component name="RunManager" selected="Database Script.console_1.sql">
+    <configuration name="console_1.sql" type="DatabaseScript" editBeforeRun="true" temporary="true" nameIsGenerated="true">
+      <script-file value="$APPLICATION_CONFIG_DIR$/consoles/db/46650c4b-1bc1-4738-a8a2-a5d65824e3bb/console_1.sql" />
+      <script-mode>FILE</script-mode>
       <method v="2" />
     </configuration>
     <configuration name="bs.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/Übung/bs.php">
@@ -98,11 +102,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Database Script.console_1.sql" />
         <item itemvalue="PHP Script.m2_4d_array.php" />
         <item itemvalue="PHP Script.meal_2.php" />
         <item itemvalue="PHP Script.bs.php" />
         <item itemvalue="PHP Script.erstesPHP.php" />
-        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -149,8 +153,16 @@
       <workItem from="1605175580358" duration="1223000" />
       <workItem from="1605264134595" duration="381000" />
       <workItem from="1605375392744" duration="656000" />
-      <workItem from="1605438597339" duration="1022000" />
+      <workItem from="1605438597339" duration="14588000" />
     </task>
+    <task id="LOCAL-00001" summary="aktuellste">
+      <created>1605439628912</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1605439628912</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,10 +202,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="163" key="#PHP/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604246689545" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604918525908">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605453514284">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604918525908" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605453514284" />
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605095528419">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -202,25 +214,25 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="260" y="265" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605375418068" />
-    <state width="1877" height="91" key="GridCell.Tab.0.bottom" timestamp="1605133800042">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1293" height="148" key="GridCell.Tab.0.bottom" timestamp="1605452238013">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="91" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605096026965" />
+    <state width="1293" height="148" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605452238013" />
     <state width="1877" height="91" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1605133800042" />
-    <state width="1877" height="91" key="GridCell.Tab.0.center" timestamp="1605133800041">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1293" height="148" key="GridCell.Tab.0.center" timestamp="1605452238013">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="91" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605096026964" />
+    <state width="1293" height="148" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605452238013" />
     <state width="1877" height="91" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1605133800041" />
-    <state width="1877" height="91" key="GridCell.Tab.0.left" timestamp="1605133800041">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1293" height="148" key="GridCell.Tab.0.left" timestamp="1605452238013">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="91" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605096026964" />
+    <state width="1293" height="148" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605452238013" />
     <state width="1877" height="91" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1605133800041" />
-    <state width="1877" height="91" key="GridCell.Tab.0.right" timestamp="1605133800042">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1293" height="148" key="GridCell.Tab.0.right" timestamp="1605452238013">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="91" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605096026964" />
+    <state width="1293" height="148" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605452238013" />
     <state width="1877" height="91" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1605133800042" />
     <state width="1860" height="344" key="GridCell.Tab.1.bottom" timestamp="1603019366806">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -266,6 +278,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604662912557" />
+    <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605446571623">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605446571623" />
+    <state x="842" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1605452476007">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="842" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605452476007" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603122763887">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -274,10 +294,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="119" width="585" height="801" key="find.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604343176186" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1604486673117">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1605446652244">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604486673117" />
+    <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605446652244" />
     <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1605264453483">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
