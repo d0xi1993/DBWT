@@ -1053,9 +1053,9 @@
       <ObjectGrants>ALL PRIVILEGES!
 </ObjectGrants>
     </user>
-    <table id="334" parent="2" name="allergene"/>
+    <table id="334" parent="2" name="allergen"/>
     <table id="335" parent="2" name="gericht"/>
-    <table id="336" parent="2" name="gericht_hat_allergene"/>
+    <table id="336" parent="2" name="gericht_hat_allergen"/>
     <table id="337" parent="2" name="gericht_hat_kategorie"/>
     <table id="338" parent="2" name="kategorie"/>
     <column id="339" parent="334" name="code">
@@ -1080,15 +1080,15 @@
     </key>
     <column id="343" parent="335" name="id">
       <Position>1</Position>
-      <DataType>varchar(50)|0s</DataType>
+      <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="344" parent="335" name="Name">
+    <column id="344" parent="335" name="name">
       <Position>2</Position>
       <DataType>varchar(80)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="345" parent="335" name="Beschreibung">
+    <column id="345" parent="335" name="beschreibung">
       <Position>3</Position>
       <DataType>varchar(800)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1102,11 +1102,13 @@
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
     </column>
     <column id="348" parent="335" name="vegan">
       <Position>6</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>0</DefaultExpression>
     </column>
     <column id="349" parent="335" name="preis_intern">
       <Position>7</Position>
@@ -1118,8 +1120,8 @@
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="351" parent="335" name="Name">
-      <ColNames>Name</ColNames>
+    <index id="351" parent="335" name="name">
+      <ColNames>name</ColNames>
       <Unique>1</Unique>
       <Type>btree</Type>
     </index>
@@ -1128,9 +1130,9 @@
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="353" parent="335" name="Name">
-      <ColNames>Name</ColNames>
-      <UnderlyingIndexName>Name</UnderlyingIndexName>
+    <key id="353" parent="335" name="name">
+      <ColNames>name</ColNames>
+      <UnderlyingIndexName>name</UnderlyingIndexName>
     </key>
     <column id="354" parent="336" name="code">
       <Position>1</Position>
@@ -1141,37 +1143,72 @@
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="356" parent="337" name="kategorie_id">
+    <index id="356" parent="336" name="code">
+      <ColNames>code</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="357" parent="336" name="gericht_id">
+      <ColNames>gericht_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <foreign-key id="358" parent="336" name="gericht_hat_allergen_ibfk_1">
+      <ColNames>code</ColNames>
+      <RefTableName>allergen</RefTableName>
+      <RefColNames>code</RefColNames>
+    </foreign-key>
+    <foreign-key id="359" parent="336" name="gericht_hat_allergen_ibfk_2">
+      <ColNames>gericht_id</ColNames>
+      <RefTableName>gericht</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="360" parent="337" name="kategorie_id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="357" parent="337" name="gericht_id">
+    <column id="361" parent="337" name="gericht_id">
       <Position>2</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="358" parent="338" name="id">
+    <index id="362" parent="337" name="kategorie_id">
+      <ColNames>kategorie_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="363" parent="337" name="gericht_id">
+      <ColNames>gericht_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <foreign-key id="364" parent="337" name="gericht_hat_kategorie_ibfk_1">
+      <ColNames>kategorie_id</ColNames>
+      <RefTableName>kategorie</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="365" parent="337" name="gericht_hat_kategorie_ibfk_2">
+      <ColNames>gericht_id</ColNames>
+      <RefTableName>gericht</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="366" parent="338" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="359" parent="338" name="name">
+    <column id="367" parent="338" name="name">
       <Position>2</Position>
       <DataType>varchar(80)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="360" parent="338" name="eltern_id">
+    <column id="368" parent="338" name="eltern_id">
       <Position>3</Position>
       <DataType>bigint(20)|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <column id="361" parent="338" name="bildname">
+    <column id="369" parent="338" name="bildname">
       <Position>4</Position>
       <DataType>varchar(200)|0s</DataType>
     </column>
-    <key id="362" parent="338" name="PRIMARY">
+    <key id="370" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
