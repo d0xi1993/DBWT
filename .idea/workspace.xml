@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -25,11 +28,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment=" Datenbank aufgabe aufgabe 4 bis 4. Teilaufgabe">
-      <change afterPath="$PROJECT_DIR$/werbeseite/datenbank_txt.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/werbeseite/werbeseite_daten.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46650c4b-1bc1-4738-a8a2-a5d65824e3bb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/46650c4b-1bc1-4738-a8a2-a5d65824e3bb.xml" afterDir="false" />
+    <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment=" Datenbank_txt ist neu Infos für Datenbank bis Aufgabe 5.11">
+      <change afterPath="$PROJECT_DIR$/werbeseite/mysqli.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/werbeseite/nl-admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/nl-admin.php" afterDir="false" />
     </list>
@@ -72,7 +72,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SWE/TEVIS" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -157,7 +157,9 @@
       <workItem from="1605438597339" duration="14588000" />
       <workItem from="1605618814220" duration="8830000" />
       <workItem from="1605699254971" duration="13769000" />
-      <workItem from="1605780214032" duration="6964000" />
+      <workItem from="1605780214032" duration="23935000" />
+      <workItem from="1605867000876" duration="5417000" />
+      <workItem from="1606155294365" duration="323000" />
     </task>
     <task id="LOCAL-00001" summary="aktuellste">
       <created>1605439628912</created>
@@ -173,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605618848183</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary=" Datenbank_txt ist neu Infos für Datenbank bis Aufgabe 5.11">
+      <created>1605799578787</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1605799578787</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,9 +216,14 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="aktuellste" />
     <MESSAGE value="Datenbank" />
-    <option name="LAST_COMMIT_MESSAGE" value="Datenbank" />
+    <MESSAGE value=" Datenbank_txt ist neu Infos für Datenbank bis Aufgabe 5.11" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Datenbank_txt ist neu Infos für Datenbank bis Aufgabe 5.11" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="540" y="175" key="#CLI_Interpreters" timestamp="1605874099523">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="540" y="175" key="#CLI_Interpreters/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605874099523" />
     <state x="667" y="163" key="#PHP" timestamp="1604246689545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -226,29 +240,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605095528419" />
-    <state x="260" y="265" key="FileChooserDialogImpl" timestamp="1605784299042">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="693" y="357" key="FileChooserDialogImpl" timestamp="1606155352960">
+      <screen x="0" y="0" width="5120" height="1400" />
     </state>
+    <state x="693" y="357" key="FileChooserDialogImpl/0.0.5120.1400@0.0.5120.1400" timestamp="1606155352960" />
     <state x="260" y="265" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605784299042" />
-    <state width="1293" height="351" key="GridCell.Tab.0.bottom" timestamp="1605794865924">
+    <state width="1293" height="351" key="GridCell.Tab.0.bottom" timestamp="1605799573141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="351" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605794865924" />
+    <state width="1293" height="351" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605799573141" />
     <state width="1877" height="91" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1605133800042" />
-    <state width="1293" height="351" key="GridCell.Tab.0.center" timestamp="1605794865924">
+    <state width="1293" height="351" key="GridCell.Tab.0.center" timestamp="1605799573141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="351" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605794865924" />
+    <state width="1293" height="351" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605799573141" />
     <state width="1877" height="91" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1605133800041" />
-    <state width="1293" height="351" key="GridCell.Tab.0.left" timestamp="1605794865924">
+    <state width="1293" height="351" key="GridCell.Tab.0.left" timestamp="1605799573141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="351" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605794865924" />
+    <state width="1293" height="351" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605799573141" />
     <state width="1877" height="91" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1605133800041" />
-    <state width="1293" height="351" key="GridCell.Tab.0.right" timestamp="1605794865924">
+    <state width="1293" height="351" key="GridCell.Tab.0.right" timestamp="1605799573141">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="351" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605794865924" />
+    <state width="1293" height="351" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605799573141" />
     <state width="1877" height="91" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1605133800042" />
     <state width="1860" height="344" key="GridCell.Tab.1.bottom" timestamp="1603019366806">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -282,18 +297,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1860" height="344" key="GridCell.Tab.2.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603019366806" />
-    <state x="314" y="443" key="NewPhpFileDialog" timestamp="1605439588760">
+    <state x="314" y="443" key="NewPhpFileDialog" timestamp="1605823779858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="314" y="443" key="NewPhpFileDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605439588760" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1604245662359">
+    <state x="314" y="443" key="NewPhpFileDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605823779858" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1605874099977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604245662359" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1604662912557">
+    <state x="461" y="165" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605874099977" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605799527571">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1604662912557" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605799527571" />
     <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605446571623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

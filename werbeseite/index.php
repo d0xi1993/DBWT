@@ -9,12 +9,7 @@
     <meta charset="UTF-8">
     <link href="test.css" rel="stylesheet">
     <title>Title</title>
-    <!--
-    <link rel="stylesheet" href="https/maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https/ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https/cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https/maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    -->
+
 </head>
 <body>
 
@@ -22,7 +17,8 @@
 
 
     <ul class="navbar">
-        <li><a class="logo"><img src="logo-FH.png" alt="Das Bild ist leider momentan nicht Verfügbar" height="80" width="40" ></a></li>
+        <li><a class="logo"><img src="logo-FH.png" alt="Das Bild ist leider momentan nicht Verfügbar" height="80"
+                                 width="40"></a></li>
         <li><a href="#Ankündigung">Ankündigung</a></li>
         <li><a href="#Speisen">Speisen</a></li>
         <li><a href="#Zahlen">Zahlen</a></li>
@@ -33,9 +29,10 @@
 <hr>
 <div class="content-body">
 
+    <!--------------------Ankündigungen---------------------------------------------------------->
 
     <br>
-    <a id="Ankündigung"></a>    <!--id statt name, name wirft ein fehler raus (vermutlich veraltet)-->
+    <a id="Ankündigung"></a>
     <div class="ankuendigung">
         <h2>Ankündigungen</h2>
         <br>
@@ -43,53 +40,58 @@
     </div>
     <br><br>
 
-    <a id="Speisen"></a>        <!--id statt name, name wirft ein fehler raus (vermutlich veraltet)-->
+    <!---------- Speisen ------------------------------------------------------------------------>
+
+    <a id="Speisen"></a>
     <div class="speisen">
         <h2>Köstlichkeiten, die Sie erwarten</h2>
         <table id="menüliste">
             <thead>
 
             <tr>
-                <th></th> <!--Oben links leer in Essenstabelle -->
-                <th>Preis intern</th>
-                <th>Preis extern</th>
+                <th>Gericht</th>
+                <th>Preis intern(Euro)</th>
+                <th>Preis extern(Euro)</th>
+                <th>Allergene</th>
             </tr>
             </thead>
             <tbody>
             <?php
 
+            /**$count ist die Anzahl der vorhandenen Speisen unten im Bereich: Zahlen*/
+            $count = 0;
+
+            /** Abrufen der Datenbank */
+            require_once "./connection.php";
+
+            $sql = "select id,name,preis_intern,preis_extern from gericht order by name;";
+
+            $table = $con->query($sql) or die($con->connect_error);
+            /** $con wird in connection.php deklariert*/
 
 
-            $file= fopen('./Speisen.txt','r');
+            for ($j = 0; $j < 5; $j++) {
+                $row = $table->fetch_assoc();
+                $count++;
 
-            while(($line = fgets($file,1024))!==false){ // liest die Zeilen der Datei ein bis ende
-
-                $val = explode(';',$line);  // trennt die attriebute der Zeil und packt sie in Array
 
                 echo "<tr>";
-                foreach($val as $i){ // gibt die Atribute in Tabellenform aus
-                    echo "<td>".$i."</td>";
-                }
-                echo "</tr>";
-                switch ($val[0]){             //Gibt zum jeweiligen Essen das passende Bild aus
-                    case "Schnitzel":
-                        echo "<tr><td colspan='3'><img src='./img/Schnitzel.jpg'></td></tr>";
-                        break;
-                    case "Pommes rot weiß":
-                        echo "<tr><td colspan='3'><img src='./img/pommes.jpg'></td></tr>";
-                        break;
-                    case "Gyros komplett":
-                        echo "<tr><td colspan='3'><img src='./img/gyros.jpg'></td></tr>";
-                        break;
+                echo "<td>" . $row['name'] . "</td>";
+                echo "<td>" . $row['preis_intern'] . "</td>";
+                echo "<td>" . $row['preis_extern'] . "</td>";
 
-                    case "Spätzle mit Soße":
-                        echo "<tr><td colspan='3'><img src='./img/spätzle.jpg'></td></tr>";
-                        break;
+                $sql_all = "select code from gericht_hat_allergen where gericht_id =" . $row['id'] . ";";
+                $allergen = $con->query($sql_all) or die($con->connect_error);
 
-                    case "Spagetti":
-                        echo "<tr><td colspan='3'><img src='./img/spagetti.jpg'></td></tr>";
-                        break;
+                echo "<td>";
+                while ($all = $allergen->fetch_assoc()) {
+                    foreach ($all as $a) {
+                        echo $a . "; ";
+                    }
                 }
+
+                echo "</td>" . "</tr>";
+
             }
 
             ?>
@@ -97,26 +99,75 @@
         </table>
     </div>
     <br><br>
+    <?php
+
+    /**
+     * Auslesen der Anzahl der bisherigen Besucher
+     */
+
+    $line = unserialize(file_get_contents('zaehler_besucher.txt'));
+
+    if (empty($line)) {
+
+        $num = 1;
+
+    } else {
+        $num = (int)$line; //$line;
+        $num += 1;
+    }
+    /**
+     * Speichern der neuen Anzahl der Besucher in Datei
+     */
+
+    $file = fopen('zaehler_besucher.txt', 'w');
+    if (!$file) {//---------------------- Prüft ob file wirklich geöffnet ist
+        die('Öffnen fehlgeschlagen');
+    } else {
+
+        fwrite($file, serialize($num));
+        fclose();
+    }
+    /**
+     *  Auslesen der Anzahl an Anmeldungen für den Newsletter
+     */
+
+    $file = fopen('newsname.txt', 'r');
+    if (!$file) {
+        die('Öffnen fehlgeschlagen');
+    } else {
+        $anzahlAnmeldungen = 0;
+
+        while (fgets($file, 1024) !== false) {
+            $anzahlAnmeldungen++;
+        }
+
+        fclose();
+    }
 
 
-    <!-- zahlen der E-Mensa-->
-    <a id="Zahlen"></a>       <!--id statt name, name wirft ein fehler raus (vermutlich veraltet)-->
+    ?>
+
+    <!-- zahlen der E-Mensa---------------------------------------------------------------------------------------------------->
+
+
+    <a id="Zahlen"></a>
     <div class="zahlen">
         <h2>E-Mensa in Zahlen</h2>
 
         <ul>
-            <li>x Besuche</li>
-            <li>y Anmeldungen zum Newsletter</li>
-            <li>z Speisen</li>
+            <li><?php echo $num ?> Besucher</li>
+            <li><?php echo $anzahlAnmeldungen; ?> Anmeldungen zum Newsletter</li>
+            <li><?php echo $count ?> Speisen</li> <!--- $count wird oben bei der ausgabe der Speisen definiert--->
         </ul>
     </div>
     <br><br>
 
+    <!--------------Anmeldung zum Newsletter------------------------------------------------------------>
 
-    <a id="Kontakt"></a>            <!--id statt name, name wirft ein fehler raus (vermutlich veraltet)-->
+    <a id="Kontakt"></a>
     <h2>Interesse geweckt? wir informieren Sie !</h2>
 
-    <form action='newsl_anzeigen.php' class="newsl" method="post">
+    <form class="newsl" method="post">
 
         <fieldset>
 
@@ -132,22 +183,22 @@
 
             <div class="n">
                 <select class="select" name="option" required>
-                    <option value="" >Newsletter bitte in:</option>
-                    <option value="1">englisch</option>
-                    <option value="2">deutsch</option>
+                    <option value="">Newsletter bitte in:</option>
+                    <option value="englisch">englisch</option>
+                    <option value="deutsch">deutsch</option>
                 </select>
             </div>
             <br>
 
             <div class="n">
                 <label class="switch">
-                    <input name='dataCheck' type="checkbox" required>
+                    <input type="checkbox" required>
                     <span class="slider round"></span>
                 </label>
                 Datenschutzhinweise gelesen
             </div>
 
-            <button type="submit" id="getnews" class="button" >Zum Newsletter anmelden</button>
+            <button type="submit" id="getnews" class="button">Zum Newsletter anmelden</button>
 
             <br>
         </fieldset>
@@ -155,74 +206,97 @@
     </form>
     <br>
     <?php
+
+    /**
+     * Prüfen undspeichern der Anmeldung
+     *
+     * @param $fehler hier werden die Fehlermeldungen gespeichert
+     * @param $success wird bei erfolgreichem Speichern true
+     */
+
     $fehler = [];
-    $success=false;
+    $success = false;
 
-    if(isset($_POST['name'])&&isset($_POST['email'])&&isset($_POST['option'])){
+    if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['option'])) {
 
-        $name=$_POST['name'];
-        $email=$_POST['email'];
-        $sprache=$_POST['option'];
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $sprache = $_POST['option'];
 
-        if (trim($name)== ""){ // Prüfen ob Namensfeld Leer ist
+        if (trim($name) == "") {
+            /** ---Prüfen ob Namensfeld Leer ist--- */
             $fehler[] = "Ungültiger name";
         }
 
 
-        if( filter_var($email, FILTER_VALIDATE_EMAIL) ){ /// Testen auf valide Email
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
-            $domain = substr(strrchr($email, "@"), 1);// doimain teil der Eingabe
-            $disposable_list = ['rcpt.at',', damnthespam.at','wegwerfmail.de',
-                'trashmail.de','trashmail.com']; // Liste nicht zugelassener Domains
+            $domain = substr(strrchr($email, "@"), 1);
+            /**---$domain => doimain teil der Eingabe---*/
 
-            if(in_array($domain, $disposable_list)){ // abgleiche der Domain Eingabe und der Liste mit gesperrten domains
+            $disposable_list = ['rcpt.at', ', damnthespam.at', 'wegwerfmail.de',
+                'trashmail.de', 'trashmail.com'];
+            /**---Liste nicht zugelassener Domains---*/
 
-                $fehler[]="invalide Email";
+            if (in_array($domain, $disposable_list)) {
+                /**---abgleichen der Domain Eingabe und der Liste mit gesperrten domains---*/
+
+                $fehler[] = "invalide Email";
             }
 
-            if(empty($fehler)) { // wenn keine Fehlermeldung in $fehler array ist wird die eingabe gespeichert
+            /**
+             * wenn keine Fehlermeldung in $fehler array ist wird die eingabe gespeichert
+             */
 
-                $neuerEintrag= [$name,$email,$sprache];
+            if (empty($fehler)) {
 
-                $file = fopen('./newsname.txt', 'a'); // öffnet newsname.txt
-                if (!$file) {//---------------------- Prüft ob file wirklichgeöffnet ist
+                $neuerEintrag = [$name, $email, $sprache];
+
+                $file = fopen('./newsname.txt', 'a');
+                if (!$file) {
                     die('Öffnen fehlgeschlagen');
                 } else {
 
                     $sstring = serialize($neuerEintrag);
 
-                    fwrite($file,$sstring. "\r\n");
+                    fwrite($file, $sstring . "\r\n");
                     fclose();
-                    $success= true;
+                    $success = true;
                 }
             }
 
 
+        } else {
+            $fehler[] = "invalide Email";
         }
-        else{
-            $fehler[]="invalide Email";
-        }
-
 
 
     }
 
-    if($success===true){
-        echo"<p>Eingabe Erfolgreich!</p>";
+    /**
+     * Ausgabe bei erfolgreichem speichern
+     */
+
+    if ($success === true) {
+        echo "<p>Eingabe Erfolgreich!</p>";
     }
+    /**
+     * Ausgabe der Fehlermeldungen
+     */
+    if (!empty($fehler)) {
+        foreach ($fehler as $f) {
 
-    if(!empty($fehler)){
-        foreach($fehler as $f){
-
-            echo"<p class='warning'>$f</p>";
+            echo "<p class='warning'>$f</p>";
         }
     }
 
     ?>
     <br><br>
-    <!--- Was uns wichtig ist-->
 
-    <a id="Wichtig"></a>                <!--id statt name, name wirft ein fehler raus (vermutlich veraltet)-->
+
+    <!--- Was uns wichtig ist---------------------------------------------------------------------------->
+
+    <a id="Wichtig"></a>
     <div class="Wichtig">
         <h2>Das ist uns wichtig</h2>
 
@@ -235,11 +309,11 @@
     <br><br>
 
 
-    <div class="container"><!---->
+    <div class="container">
         <div class="abschluss" id="trans">
             <h2>Wir freuen uns auf Ihren Besuch!</h2>
         </div>
-    </div><!---->
+    </div>
 
 
 </div>

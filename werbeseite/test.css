@@ -4,6 +4,13 @@ body {
     border-right: 5cm solid bisque;
     border-collapse: collapse;
 }
+td img{/*Größenanpassung der Bilder von den Speisen*/
+    height: 30%;
+    width: 50%;
+}
+.warning{
+    color: red;
+}
 
 /*Üben anfang*/
 nav li:hover{

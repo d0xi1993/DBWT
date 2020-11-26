@@ -1,1 +1,3 @@
-a:3:{i:0;s:15:"Nicolas Woitzyk";i:1;s:26:"nicolas.woitzyk@hotmail.de";i:2;s:1:"1";}
+a:3:{i:0;s:5:"Bernd";i:1;s:13:"Bernd@mail.de";i:2;s:8:"englisch";}
+a:3:{i:0;s:14:"Philip Schmidt";i:1;s:18:"Philthepain@gmx.de";i:2;s:7:"deutsch";}
+a:3:{i:0;s:7:"mathias";i:1;s:12:"email@gmx.de";i:2;s:7:"deutsch";}

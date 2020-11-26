@@ -3,8 +3,14 @@ $data = file_get_contents('newsname.txt');
 
 echo $data;
 
+/*
+Verbindung aufbauen
+Statement erstellen
+"';Drop Database"
 
+$v tütel = "select ... where Vorname=@vorname"
 
+Statement.AddParam('@vorname', 1);
 
 
 /*if (isset($_GET['name']) and    //wenn die Sachen in dem Newsletter enthalten sind und Datenschutzerklärung akzeptiert wurde

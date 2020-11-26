@@ -1,0 +1,5 @@
+Schnitzel;1,2;2,4
+Pommes rot weiß;0,8;1,6
+Gyros komplett;5;10
+Spätzle mit Soße;2,5;5
+Spagetti;1;2
