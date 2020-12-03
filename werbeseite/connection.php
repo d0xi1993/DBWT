@@ -1,7 +1,7 @@
 <?php
 $servername="localhost";
 $user="root";
-$pwd="dbwt_lip";
+$pwd="root";
 $db="db_werbeseite";
 
 $con= new mysqli($servername, $user,$pwd,$db);

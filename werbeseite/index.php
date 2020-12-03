@@ -68,7 +68,7 @@
 
             $table = $con->query($sql) or die($con->connect_error);
             /** $con wird in connection.php deklariert*/
-
+            $all_Liste = [];
 
             for ($j = 0; $j < 5; $j++) {
                 $row = $table->fetch_assoc();
@@ -87,242 +87,252 @@
                 while ($all = $allergen->fetch_assoc()) {
                     foreach ($all as $a) {
                         echo $a . "; ";
+                        if(!in_array($a,$all_Liste)){
+                            $all_Liste[] = $a;
+                        }
                     }
                 }
-
                 echo "</td>" . "</tr>";
 
             }
 
-            ?>
-            </tbody>
+
+            echo "</tbody>
         </table>
     </div>
-    <br><br>
-    <?php
+    <br><br>";
 
-    /**
-     * Auslesen der Anzahl der bisherigen Besucher
-     */
+            foreach ($all_Liste as $al){
+                $sql_all_liste="Select code,name From allergen WHERE code ='". $al."';";
+                $ausgabe_liste = $con->query($sql_all_liste) or die($con->connect_error);
+                foreach ($ausgabe_liste as $aus){
+                    echo $aus['code']."= " .$aus['name']."; ";
+                }
 
-    $line = unserialize(file_get_contents('zaehler_besucher.txt'));
-
-    if (empty($line)) {
-
-        $num = 1;
-
-    } else {
-        $num = (int)$line; //$line;
-        $num += 1;
-    }
-    /**
-     * Speichern der neuen Anzahl der Besucher in Datei
-     */
-
-    $file = fopen('zaehler_besucher.txt', 'w');
-    if (!$file) {//---------------------- Prüft ob file wirklich geöffnet ist
-        die('Öffnen fehlgeschlagen');
-    } else {
-
-        fwrite($file, serialize($num));
-        fclose();
-    }
-    /**
-     *  Auslesen der Anzahl an Anmeldungen für den Newsletter
-     */
-
-    $file = fopen('newsname.txt', 'r');
-    if (!$file) {
-        die('Öffnen fehlgeschlagen');
-    } else {
-        $anzahlAnmeldungen = 0;
-
-        while (fgets($file, 1024) !== false) {
-            $anzahlAnmeldungen++;
-        }
-
-        fclose();
-    }
-
-
-    ?>
-
-    <!-- zahlen der E-Mensa---------------------------------------------------------------------------------------------------->
-
-
-    <a id="Zahlen"></a>
-    <div class="zahlen">
-        <h2>E-Mensa in Zahlen</h2>
-
-        <ul>
-            <li><?php echo $num ?> Besucher</li>
-            <li><?php echo $anzahlAnmeldungen; ?> Anmeldungen zum Newsletter</li>
-            <li><?php echo $count ?> Speisen</li> <!--- $count wird oben bei der ausgabe der Speisen definiert--->
-        </ul>
-    </div>
-    <br><br>
-
-    <!--------------Anmeldung zum Newsletter------------------------------------------------------------>
-
-    <a id="Kontakt"></a>
-    <h2>Interesse geweckt? wir informieren Sie !</h2>
-
-    <form class="newsl" method="post">
-
-        <fieldset>
-
-            <div class="n">
-                <label for="name">Ihr Name:</label> <br>
-                <input placeholder="Name" id="name" name="name" size="15">
-            </div>
-
-            <div class="n">
-                <label for="email">E-Mail:</label><br>
-                <input id="email" name="email" size="15">
-            </div>
-
-            <div class="n">
-                <select class="select" name="option" required>
-                    <option value="">Newsletter bitte in:</option>
-                    <option value="englisch">englisch</option>
-                    <option value="deutsch">deutsch</option>
-                </select>
-            </div>
-            <br>
-
-            <div class="n">
-                <label class="switch">
-                    <input type="checkbox" required>
-                    <span class="slider round"></span>
-                </label>
-                Datenschutzhinweise gelesen
-            </div>
-
-            <button type="submit" id="getnews" class="button">Zum Newsletter anmelden</button>
-
-            <br>
-        </fieldset>
-
-    </form>
-    <br>
-    <?php
-
-    /**
-     * Prüfen undspeichern der Anmeldung
-     *
-     * @param $fehler hier werden die Fehlermeldungen gespeichert
-     * @param $success wird bei erfolgreichem Speichern true
-     */
-
-    $fehler = [];
-    $success = false;
-
-    if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['option'])) {
-
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $sprache = $_POST['option'];
-
-        if (trim($name) == "") {
-            /** ---Prüfen ob Namensfeld Leer ist--- */
-            $fehler[] = "Ungültiger name";
-        }
-
-
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-
-            $domain = substr(strrchr($email, "@"), 1);
-            /**---$domain => doimain teil der Eingabe---*/
-
-            $disposable_list = ['rcpt.at', ', damnthespam.at', 'wegwerfmail.de',
-                'trashmail.de', 'trashmail.com'];
-            /**---Liste nicht zugelassener Domains---*/
-
-            if (in_array($domain, $disposable_list)) {
-                /**---abgleichen der Domain Eingabe und der Liste mit gesperrten domains---*/
-
-                $fehler[] = "invalide Email";
             }
 
             /**
-             * wenn keine Fehlermeldung in $fehler array ist wird die eingabe gespeichert
+             * Auslesen der Anzahl der bisherigen Besucher
              */
 
-            if (empty($fehler)) {
+            $line = unserialize(file_get_contents('zaehler_besucher.txt'));
 
-                $neuerEintrag = [$name, $email, $sprache];
+            if (empty($line)) {
 
-                $file = fopen('./newsname.txt', 'a');
-                if (!$file) {
-                    die('Öffnen fehlgeschlagen');
-                } else {
+                $num = 1;
 
-                    $sstring = serialize($neuerEintrag);
+            } else {
+                $num = (int)$line; //$line;
+                $num += 1;
+            }
+            /**
+             * Speichern der neuen Anzahl der Besucher in Datei
+             */
 
-                    fwrite($file, $sstring . "\r\n");
-                    fclose();
-                    $success = true;
+            $file = fopen('zaehler_besucher.txt', 'w');
+            if (!$file) {//---------------------- Prüft ob file wirklich geöffnet ist
+                die('Öffnen fehlgeschlagen');
+            } else {
+
+                fwrite($file, serialize($num));
+                fclose($file);
+            }
+            /**
+             *  Auslesen der Anzahl an Anmeldungen für den Newsletter
+             */
+
+            $file = fopen('newsname.txt', 'r');
+            if (!$file) {
+                die('Öffnen fehlgeschlagen');
+            } else {
+                $anzahlAnmeldungen = 0;
+
+                while (fgets($file, 1024) !== false) {
+                    $anzahlAnmeldungen++;
                 }
+
+                fclose($file);
             }
 
 
-        } else {
-            $fehler[] = "invalide Email";
-        }
+            ?>
+
+            <!-- zahlen der E-Mensa---------------------------------------------------------------------------------------------------->
 
 
-    }
+            <a id="Zahlen"></a>
+            <div class="zahlen">
+                <h2>E-Mensa in Zahlen</h2>
 
-    /**
-     * Ausgabe bei erfolgreichem speichern
-     */
+                <ul>
+                    <li><?php echo $num ?> Besucher</li>
+                    <li><?php echo $anzahlAnmeldungen; ?> Anmeldungen zum Newsletter</li>
+                    <li><?php echo $count ?> Speisen</li> <!--- $count wird oben bei der ausgabe der Speisen definiert--->
+                </ul>
+            </div>
+            <br><br>
 
-    if ($success === true) {
-        echo "<p>Eingabe Erfolgreich!</p>";
-    }
-    /**
-     * Ausgabe der Fehlermeldungen
-     */
-    if (!empty($fehler)) {
-        foreach ($fehler as $f) {
+            <!--------------Anmeldung zum Newsletter------------------------------------------------------------>
 
-            echo "<p class='warning'>$f</p>";
-        }
-    }
+            <a id="Kontakt"></a>
+            <h2>Interesse geweckt? wir informieren Sie !</h2>
 
-    ?>
-    <br><br>
+            <form class="newsl" method="post">
+
+                <fieldset>
+
+                    <div class="n">
+                        <label for="name">Ihr Name:</label> <br>
+                        <input placeholder="Name" id="name" name="name" size="15">
+                    </div>
+
+                    <div class="n">
+                        <label for="email">E-Mail:</label><br>
+                        <input id="email" name="email" size="15">
+                    </div>
+
+                    <div class="n">
+                        <select class="select" name="option" required>
+                            <option value="">Newsletter bitte in:</option>
+                            <option value="englisch">englisch</option>
+                            <option value="deutsch">deutsch</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <div class="n">
+                        <label class="switch">
+                            <input type="checkbox" required>
+                            <span class="slider round"></span>
+                        </label>
+                        Datenschutzhinweise gelesen
+                    </div>
+
+                    <button type="submit" id="getnews" class="button">Zum Newsletter anmelden</button>
+
+                    <br>
+                </fieldset>
+
+            </form>
+            <br>
+            <?php
+
+            /**
+             * Prüfen undspeichern der Anmeldung
+             *
+             * @param $fehler hier werden die Fehlermeldungen gespeichert
+             * @param $success wird bei erfolgreichem Speichern true
+             */
+
+            $fehler = [];
+            $success = false;
+
+            if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['option'])) {
+
+                $name = $_POST['name'];
+                $email = $_POST['email'];
+                $sprache = $_POST['option'];
+
+                if (trim($name) == "") {
+                    /** ---Prüfen ob Namensfeld Leer ist--- */
+                    $fehler[] = "Ungültiger name";
+                }
 
 
-    <!--- Was uns wichtig ist---------------------------------------------------------------------------->
+                if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
-    <a id="Wichtig"></a>
-    <div class="Wichtig">
-        <h2>Das ist uns wichtig</h2>
+                    $domain = substr(strrchr($email, "@"), 1);
+                    /**---$domain => doimain teil der Eingabe---*/
 
+                    $disposable_list = ['rcpt.at', ', damnthespam.at', 'wegwerfmail.de',
+                        'trashmail.de', 'trashmail.com'];
+                    /**---Liste nicht zugelassener Domains---*/
+
+                    if (in_array($domain, $disposable_list)) {
+                        /**---abgleichen der Domain Eingabe und der Liste mit gesperrten domains---*/
+
+                        $fehler[] = "invalide Email";
+                    }
+
+                    /**
+                     * wenn keine Fehlermeldung in $fehler array ist wird die eingabe gespeichert
+                     */
+
+                    if (empty($fehler)) {
+
+                        $neuerEintrag = [$name, $email, $sprache];
+
+                        $file = fopen('./newsname.txt', 'a');
+                        if (!$file) {
+                            die('Öffnen fehlgeschlagen');
+                        } else {
+
+                            $sstring = serialize($neuerEintrag);
+
+                            fwrite($file, $sstring . "\r\n");
+                            fclose();
+                            $success = true;
+                        }
+                    }
+
+
+                } else {
+                    $fehler[] = "invalide Email";
+                }
+
+
+            }
+
+            /**
+             * Ausgabe bei erfolgreichem speichern
+             */
+
+            if ($success === true) {
+                echo "<p>Eingabe Erfolgreich!</p>";
+            }
+            /**
+             * Ausgabe der Fehlermeldungen
+             */
+            if (!empty($fehler)) {
+                foreach ($fehler as $f) {
+
+                    echo "<p class='warning'>$f</p>";
+                }
+            }
+
+            ?>
+            <br><br>
+
+
+            <!--- Was uns wichtig ist---------------------------------------------------------------------------->
+
+            <a id="Wichtig"></a>
+            <div class="Wichtig">
+                <h2>Das ist uns wichtig</h2>
+
+                <ul>
+                    <li>Beste frische saisonale Zutaten</li>
+                    <li>Ausgewogene abwechslungsreiche Gerichte</li>
+                    <li>Sauberkeit</li>
+                </ul>
+            </div>
+            <br><br>
+
+
+            <div class="container">
+                <div class="abschluss" id="trans">
+                    <h2>Wir freuen uns auf Ihren Besuch!</h2>
+                </div>
+            </div>
+
+
+    </div>
+    <footer>
         <ul>
-            <li>Beste frische saisonale Zutaten</li>
-            <li>Ausgewogene abwechslungsreiche Gerichte</li>
-            <li>Sauberkeit</li>
+            <li>(c) E-Mensa GmbH</li>
+            <li>Phillip Schmidt, Nicolas Woitzyk</li>
+            <li><a href="">Impressum</a></li>
         </ul>
-    </div>
-    <br><br>
-
-
-    <div class="container">
-        <div class="abschluss" id="trans">
-            <h2>Wir freuen uns auf Ihren Besuch!</h2>
-        </div>
-    </div>
-
-
-</div>
-<footer>
-    <ul>
-        <li>(c) E-Mensa GmbH</li>
-        <li>Phillip Schmidt, Nicolas Woitzyk</li>
-        <li><a href="">Impressum</a></li>
-    </ul>
-</footer>
+    </footer>
 </body>
 </html>

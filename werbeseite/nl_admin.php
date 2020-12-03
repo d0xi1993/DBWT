@@ -80,6 +80,12 @@ function sortieren(&$array, $spalten, $aufab)
         <button type="submit">Sortieren</button>
     </form>
 </fieldset>
+<fieldset>
+    <form action="nl_admin.php" method="get">
+        <input type="search" name="filter">
+        <button type="submit">Filtern</button>
+    </form>
+</fieldset>
 
 
 <?php
@@ -103,13 +109,29 @@ if (!$file_nl) {
     }
 
 
-    fclose();
+    fclose($file_nl);
 }
 // Aufruf funktion sortieren()
+$ausgaeb = [];
 
 if (isset($_GET['spaltenauswahl']) && isset($_GET['aufab'])) {
-    sortieren($anmeldung, $_GET['spaltenauswahl'], $_GET['aufab']);
+    $ausgabe = $anmeldung;
+    sortieren($ausgabe, $_GET['spaltenauswahl'], $_GET['aufab']);
 }
+elseif (isset($_GET['filter'])) {
+    foreach ($anmeldung as $arr => $a){
+        if(stripos($a['0'],$_GET['filter'])!==false){
+            $ausgabe[] = $a;
+        }
+    }
+    if(empty($ausgabe)){
+        $ausgabe = $anmeldung;
+    }
+
+}else{
+    $ausgabe = $anmeldung;
+}
+
 ?>
 
 <!---------------------Ausgabe-------------------------------------------->
@@ -134,7 +156,7 @@ if (isset($_GET['spaltenauswahl']) && isset($_GET['aufab'])) {
          *  ausgabe der sortierten Anmeldungen
          */
 
-        foreach ($anmeldung as $arr => $item) {
+        foreach ($ausgabe as $arr => $item) {
 
             echo "<tr>";
             echo "<td>" . $item[0] . "</td>";

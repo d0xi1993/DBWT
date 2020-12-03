@@ -1,7 +1,7 @@
 <?php
 $link=mysqli_connect("localhost", // Host der Datenbank
     "root",                 // Benutzername zur Anmeldung
-"dbwt_lip",    // Passwort
+"root",    // Passwort
 "db_werbeseite"      // Auswahl der Datenbanken (bzw. des Schemas)
         // optional port der Datenbank
 );
