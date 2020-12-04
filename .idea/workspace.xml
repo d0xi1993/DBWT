@@ -28,16 +28,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment="wunschgericht php hat die sql statements mit drin !">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46650c4b-1bc1-4738-a8a2-a5d65824e3bb.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46650c4b-1bc1-4738-a8a2-a5d65824e3bb/storage_v2/_src_/schema/db_dbwt._L6TVg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46650c4b-1bc1-4738-a8a2-a5d65824e3bb/storage_v2/_src_/schema/db_emensawerbeseite.AdcUgQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/46650c4b-1bc1-4738-a8a2-a5d65824e3bb/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+    <list default="true" id="ce2aa57b-d2d9-457e-8922-c8e1d9ced4d1" name="Default Changelist" comment="wunschgericht php ready und auf seite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/werbeseite/connection.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/connection.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/werbeseite/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/werbeseite/newsname.txt" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/newsname.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/werbeseite/wunschgericht.php" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/wunschgericht.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/werbeseite/zaehler_besucher.txt" beforeDir="false" afterPath="$PROJECT_DIR$/werbeseite/zaehler_besucher.txt" afterDir="false" />
     </list>
@@ -77,7 +71,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.data.extractors.current.export.id" value="SQL-Insert-Statements.sql.groovy" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SWE/TEVIS" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
@@ -182,7 +176,8 @@
       <workItem from="1607005439702" duration="8158000" />
       <workItem from="1607018494397" duration="5668000" />
       <workItem from="1607024178603" duration="1187000" />
-      <workItem from="1607025400142" duration="10406000" />
+      <workItem from="1607025400142" duration="13187000" />
+      <workItem from="1607081437913" duration="17644000" />
     </task>
     <task id="LOCAL-00001" summary="aktuellste">
       <created>1605439628912</created>
@@ -212,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607016673189</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="wunschgericht php ready und auf seite">
+      <created>1607045819779</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1607045819779</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +250,8 @@
     <MESSAGE value="Datenbank" />
     <MESSAGE value=" Datenbank_txt ist neu Infos für Datenbank bis Aufgabe 5.11" />
     <MESSAGE value="wunschgericht php hat die sql statements mit drin !" />
-    <option name="LAST_COMMIT_MESSAGE" value="wunschgericht php hat die sql statements mit drin !" />
+    <MESSAGE value="wunschgericht php ready und auf seite" />
+    <option name="LAST_COMMIT_MESSAGE" value="wunschgericht php ready und auf seite" />
   </component>
   <component name="WindowStateProjectService">
     <state x="-1380" y="175" key="#CLI_Interpreters" timestamp="1607024558688">
@@ -279,38 +282,38 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1280" y="275" key="DUMP_DIALOG_DIMENSION_KEY/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607019906394" />
-    <state x="-1660" y="265" key="FileChooserDialogImpl" timestamp="1607025255423">
+    <state x="-1660" y="265" key="FileChooserDialogImpl" timestamp="1607083341883">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1660" y="265" key="FileChooserDialogImpl/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607025255423" />
+    <state x="-1660" y="265" key="FileChooserDialogImpl/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607083341883" />
     <state x="693" y="357" key="FileChooserDialogImpl/0.0.5120.1400@0.0.5120.1400" timestamp="1606155352960" />
     <state x="260" y="265" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605784299042" />
-    <state width="3533" height="255" key="GridCell.Tab.0.bottom" timestamp="1607045754193">
-      <screen x="0" y="0" width="5120" height="1400" />
+    <state width="1634" height="267" key="GridCell.Tab.0.bottom" timestamp="1607102789217">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="177" key="GridCell.Tab.0.bottom/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607024534213" />
-    <state width="3533" height="255" key="GridCell.Tab.0.bottom/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607045754193" />
+    <state width="1634" height="267" key="GridCell.Tab.0.bottom/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607102789217" />
+    <state width="5077" height="267" key="GridCell.Tab.0.bottom/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607082138885" />
     <state width="1293" height="351" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605799573141" />
     <state width="1877" height="91" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1605133800042" />
-    <state width="3533" height="255" key="GridCell.Tab.0.center" timestamp="1607045754193">
-      <screen x="0" y="0" width="5120" height="1400" />
+    <state width="1634" height="267" key="GridCell.Tab.0.center" timestamp="1607102789217">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="177" key="GridCell.Tab.0.center/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607024534212" />
-    <state width="3533" height="255" key="GridCell.Tab.0.center/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607045754193" />
+    <state width="1634" height="267" key="GridCell.Tab.0.center/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607102789217" />
+    <state width="5077" height="267" key="GridCell.Tab.0.center/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607082138885" />
     <state width="1293" height="351" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605799573141" />
     <state width="1877" height="91" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1605133800041" />
-    <state width="3533" height="255" key="GridCell.Tab.0.left" timestamp="1607045754193">
-      <screen x="0" y="0" width="5120" height="1400" />
+    <state width="1634" height="267" key="GridCell.Tab.0.left" timestamp="1607102789217">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="177" key="GridCell.Tab.0.left/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607024534212" />
-    <state width="3533" height="255" key="GridCell.Tab.0.left/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607045754193" />
+    <state width="1634" height="267" key="GridCell.Tab.0.left/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607102789217" />
+    <state width="5077" height="267" key="GridCell.Tab.0.left/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607082138885" />
     <state width="1293" height="351" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605799573141" />
     <state width="1877" height="91" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1605133800041" />
-    <state width="3533" height="255" key="GridCell.Tab.0.right" timestamp="1607045754193">
-      <screen x="0" y="0" width="5120" height="1400" />
+    <state width="1634" height="267" key="GridCell.Tab.0.right" timestamp="1607102789217">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1293" height="177" key="GridCell.Tab.0.right/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607024534212" />
-    <state width="3533" height="255" key="GridCell.Tab.0.right/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607045754193" />
+    <state width="1634" height="267" key="GridCell.Tab.0.right/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607102789217" />
+    <state width="5077" height="267" key="GridCell.Tab.0.right/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607082138885" />
     <state width="1293" height="351" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605799573141" />
     <state width="1877" height="91" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1605133800042" />
     <state width="1860" height="344" key="GridCell.Tab.1.bottom" timestamp="1603019366806">
@@ -356,18 +359,19 @@
     <state x="-1459" y="165" key="SettingsEditor/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607024559230" />
     <state x="1229" y="222" key="SettingsEditor/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607015490372" />
     <state x="461" y="165" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605874099977" />
-    <state x="1472" y="341" key="Vcs.Push.Dialog.v2" timestamp="1607012300853">
+    <state x="1472" y="341" key="Vcs.Push.Dialog.v2" timestamp="1607045881421">
       <screen x="0" y="0" width="5120" height="1400" />
     </state>
-    <state x="1472" y="341" key="Vcs.Push.Dialog.v2/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607012300853" />
+    <state x="1472" y="341" key="Vcs.Push.Dialog.v2/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607045881421" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605799527571" />
     <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1" timestamp="1605446571623">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="859" y="397" key="com.intellij.database.actions.DdlActions$CreateObject$1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605446571623" />
-    <state x="842" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1605700716526">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2245" y="548" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1607048896644">
+      <screen x="0" y="0" width="5120" height="1400" />
     </state>
+    <state x="2245" y="548" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607048896644" />
     <state x="842" y="407" width="316" height="244" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605700716526" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603122763887">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -382,9 +386,10 @@
     </state>
     <state x="1643" y="323" key="run.anything.popup/0.0.5120.1400/-1920.0.1920.1040@0.0.5120.1400" timestamp="1607022555881" />
     <state x="616" y="240" key="run.anything.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605446652244" />
-    <state x="623" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1605264453483">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1297" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1607102402199">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="-1297" y="229" width="672" height="678" key="search.everywhere.popup/0.0.5120.1400/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1607102402199" />
     <state x="623" y="229" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1605264453483" />
   </component>
 </project>

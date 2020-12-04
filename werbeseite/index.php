@@ -100,7 +100,7 @@
                 echo "<td>";
                 while ($all = $allergen->fetch_assoc()) {
                     foreach ($all as $a) {
-                        echo $a . "; ";
+                        echo htmlspecialchars($a) . "; "; //gegen sql inj und xss
                         if(!in_array($a,$all_Liste)){
                             $all_Liste[] = $a;
                         }
@@ -273,7 +273,8 @@
                      */
 
                     if (empty($fehler)) {
-
+                        $safe = ['\'',';','<','>'];
+                        $name = str_replace($safe,'',$name);  //gegen sql injection und XSS
                         $neuerEintrag = [$name, $email, $sprache];
 
                         $file = fopen('./newsname.txt', 'a');

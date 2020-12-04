@@ -6,7 +6,10 @@
     <style type="text/css">
         *{
             font-family: Comic Sans MS;
+            border: 4px solid bisque;
 
+            background: white;
+            border-collapse: collapse;
 
         }
         fieldset{
@@ -26,7 +29,7 @@
         <input type="text" id="name" name="name" placeholder="Titel Ihres Wunschgerichtes" required>
         <br>
         <?php
-
+        $search = ['\'',';','<','"']; //gegen sql inj und xss
         !isset($_POST['name']);
         ?>
 
@@ -46,9 +49,17 @@
         <br>
         <?php
 
-        if(!isset($_POST['vorname']) == ""){
+        if(isset($_POST['vorname'])){
+            if(!empty($_POST['vorname'])){
+                $vorname = $_POST['vorname'];
+                $vorname = str_replace($search, " ", $vorname); //gegen sql inj und xss
+            }else{
 
-            $_POST['vorname'] = "unbekannt";
+                $vorname = "unbekannt";
+
+            }
+
+
         }
 
         ?>
@@ -59,9 +70,13 @@
         <input type="text" id="nachname"  name="nachname"placeholder="anonym" >
         <br>
         <?php
-        if(!isset($_POST['nachname']) == ""){
-
-            $_POST['nachname'] = "unbekannt";
+        if(isset($_POST['nachname'])){
+            if(!empty($_POST['nachname'])){
+                $nachname = $_POST['nachname'];
+                $nachname = str_replace($search, " ", $nachname); //gegen sql inj und xss
+            }else{
+                $nachname = "unbekannt";
+            }
         }
         ?>
 
@@ -78,7 +93,7 @@
             if ($h == "" || strpos($_POST['email'], 'rcpt.at') || strpos($_POST['email'], 'damnthespam.at') //überprüft auf Falschemails
                 || strpos($_POST['email'], 'egwerfmail.de') || strpos($_POST['email'], 'trashmail.')
                 || !strpos($_POST['email'], '@')) {
-                echo "Die Email-Adresse muss korrekt nach dem Format name@example.com formatiert sein", '<br>',
+                echo "Dias Email-Adressen Format ist inkorrekt sollte: name@example.com formatiert sein", '<br>',
                 "Das Email-Format ist nicht gültig", '<br>';
                 $mailbool = false;
             }
@@ -101,39 +116,54 @@
 </html>
 <?php
 if(isset($_POST['name'])){
-    $link = mysqli_connect("localhost",
+    $mysqli = new mysqli("localhost",
         "root",
         "",
         "db_emensawerbeseite",
         "3306"
     );
 
-    if (!$link) {
+    if (!$mysqli) {
         echo "Verbindung fehlgeschlagen: ", mysqli_connect_error();
         exit();
     }
 
 //sql Abfragebefehl als string
     $beschreibung = $_POST['beschreibung'];
-    $name = $_POST['name'];
-    $vorname = $_POST['vorname'];
-    $nachname = $_POST['nachname'];
-    $email = $_POST['email'];
+    $beschreibung = str_replace('\'', " ", $beschreibung); //gegen sql inj und xss
 
+    $name = $_POST['name'];
+    $name =  str_replace($search, " ", $name); //gegen sql inj und xss
+    $email = $_POST['email'];
 
     $anf = "INSERT INTO wunschgericht (datum, beschreibung , name) VALUES ( CURRENT_TIMESTAMP , '$beschreibung', '$name')"; //zuordnen der Datenbank also eingaben der Datenbank zuweisen
 
+    $result = mysqli_query($mysqli, $anf);
 
-    $result = mysqli_query($link, $anf);
     if (!$result) {
-        echo "Fehler während der Abfrage:  ", mysqli_error($link);
+        echo "Fehler während der Abfrage:  ", mysqli_error($mysqli);
         exit();
     }
     $anf2 = "INSERT INTO ersteller (vorname, nachname, mail) VALUES ('$vorname', '$nachname', '$email')";
 
-    $result = mysqli_query($link, $anf2);
+    $result = mysqli_query($mysqli, $anf2);
     if (!$result) {
-        echo "Fehler während der Abfrage:  ", mysqli_error($link);
+        echo "Fehler während der Abfrage:  ", mysqli_error($mysqli);
         exit();
     }
+
+/*
+    $anf = "SELECT * FROM wunschgericht ORDER BY id DESC LIMIT 5;"; //zuordnen der Datenbank also eingaben der Datenbank zuweisen
+
+
+    $result_safe = mysqli_query($mysqli, $anf);
+    if(isset($result_safe)){
+
+        foreach ($result_safe as $rs)
+        {
+            echo htmlspecialchars($rs['name']);
+        }
+    }
+*/
+
 }
