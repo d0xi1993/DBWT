@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -7,6 +6,12 @@
     <style type="text/css">
         *{
             font-family: Comic Sans MS;
+
+
+        }
+        fieldset{
+            text-align: center;
+
         }
     </style>
 </head>
@@ -18,30 +23,32 @@
 
         <label for="name">Name des Wunschgerichtes</label>
         <br>
-        <input type="text" id="name" name="name" placeholder="Bitte geben Sie den Titel Ihres Wunschgerichtes an"  size="28" required>
+        <input type="text" id="name" name="name" placeholder="Titel Ihres Wunschgerichtes" required>
         <br>
         <?php
-        $_POST['name'];
+
+        !isset($_POST['name']);
         ?>
 
         <br>
         <label for="beschreibung">Beschreibung</label>
         <br>
-        <input type="text" id="beschreibung" name="beschreibung" placeholder="optional" size="28" >
+        <input type="text" id="beschreibung" name="beschreibung" placeholder="optional"  >
         <br>
         <?php
-         echo $_POST['beschreibung'];
+        !isset($_POST['beschreibung']);
         ?>
 
         <br>
         <label for="vorname" >Vorname</label>
         <br>
-        <input type="text" id="vorname" name="vorname" placeholder="Anonym" size="28" >
+        <input type="text" id="vorname" name="vorname" placeholder="anonym" >
         <br>
         <?php
-        if($_POST['vorname'] == ""){
 
-            $_POST['vorname'] = "anonym";
+        if(!isset($_POST['vorname']) == ""){
+
+            $_POST['vorname'] = "unbekannt";
         }
 
         ?>
@@ -49,26 +56,26 @@
         <br>
         <label for="nachname">Nachname</label>
         <br>
-        <input type="text" id="nachname"  name="nachname"placeholder="Anonym" size="28" >
+        <input type="text" id="nachname"  name="nachname"placeholder="anonym" >
         <br>
         <?php
-        if($_POST['nachname'] == ""){
+        if(!isset($_POST['nachname']) == ""){
 
-            $_POST['nachname'] = "anonym";
+            $_POST['nachname'] = "unbekannt";
         }
         ?>
 
         <br>
         <label for="mail">E-Mail</label>
         <br>
-        <input type="text" id="email" name="email"  placeholder="Bitte geben Sie Ihre E-Mail ein" size="28" required>
+        <input type="text" id="email" name="email"  placeholder="Bitte geben Sie Ihre E-Mail ein"  required>
         <br>
         <?php
         $mailbool = true;
         if (isset($_POST['email'])) { //leerzeichen rausfiltern
             $h = trim($_POST['email']);
-            // überprüft ob spam mails benutzt wurden
-            if ($h == "" || strpos($_POST['email'], 'rcpt.at') || strpos($_POST['email'], 'damnthespam.at')
+
+            if ($h == "" || strpos($_POST['email'], 'rcpt.at') || strpos($_POST['email'], 'damnthespam.at') //überprüft auf Falschemails
                 || strpos($_POST['email'], 'egwerfmail.de') || strpos($_POST['email'], 'trashmail.')
                 || !strpos($_POST['email'], '@')) {
                 echo "Die Email-Adresse muss korrekt nach dem Format name@example.com formatiert sein", '<br>',
@@ -82,9 +89,10 @@
 
 
 
-        <input type="submit" value="Wunsch Abschicken">
+        <input type="submit" value="Wunsch Abschicken" >
         <br>
         <br>
+        <a href="index.php"><input type="button" value="Zurück zur Hauptseite"></a>
 
     </form>
 </fieldset>
@@ -93,12 +101,11 @@
 </html>
 <?php
 if(isset($_POST['name'])){
-//if(isset($_POST['submit'])) {
-    $link = mysqli_connect("localhost", // Host der Datenbank
-        "root",                        // Benutzername zur Anmeldung
-        "root",                    // Passwort
-        "db_emensawerbeseite",        // Auswahl der Datenbanken (bzw. des Schemas)
-        "3306"                        // optional port der Datenbank
+    $link = mysqli_connect("localhost",
+        "root",
+        "",
+        "db_emensawerbeseite",
+        "3306"
     );
 
     if (!$link) {
@@ -113,40 +120,20 @@ if(isset($_POST['name'])){
     $nachname = $_POST['nachname'];
     $email = $_POST['email'];
 
-    $sql = "INSERT INTO wunschgericht (datum, beschreibung, name) VALUES ( NOW(), '$beschreibung', '$name')";
+
+    $anf = "INSERT INTO wunschgericht (datum, beschreibung , name) VALUES ( CURRENT_TIMESTAMP , '$beschreibung', '$name')"; //zuordnen der Datenbank also eingaben der Datenbank zuweisen
 
 
-    $result = mysqli_query($link, $sql);
+    $result = mysqli_query($link, $anf);
     if (!$result) {
         echo "Fehler während der Abfrage:  ", mysqli_error($link);
         exit();
     }
-    $sql2 = "INSERT INTO ersteller (eid, vorname, nachname, mail) VALUES (LAST_INSERT_ID(), '$vorname', '$nachname', '$email')";
+    $anf2 = "INSERT INTO ersteller (vorname, nachname, mail) VALUES ('$vorname', '$nachname', '$email')";
 
-    $result = mysqli_query($link, $sql2);
+    $result = mysqli_query($link, $anf2);
     if (!$result) {
         echo "Fehler während der Abfrage:  ", mysqli_error($link);
         exit();
     }
-
-    // Aufgabe 1.6
-    // SELECT * FROM wunschgericht ORDER BY wid DESC LIMIT 5;
 }
-
-
--- Aufgabe 1 M4 Datenbank Wunschgericht
-
-create table if not EXISTS 'wunschgericht' (
-'id' BIGINT auto_increment,            -- automtisch berechnete Nummer
-    'datum' DATE not null,                 -- Erstellungsdatum
-    'beschreibung' VARCHAR(800) NOT NULL,  -- Beschreibung
-    'name' VARCHAR(300) not null           -- Namen des Wunschgerichts
-
-);
-
-create table if not exists 'ersteller' (
-'eid' bigint auto_increment,
-    'vorname' varchar(300)not null,
-    'nachname' varchar(300) not null,
-    'mail' varchar(300) not null
-);

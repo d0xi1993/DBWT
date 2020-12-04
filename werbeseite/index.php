@@ -21,6 +21,7 @@
                                  width="40"></a></li>
         <li><a href="#Ankündigung">Ankündigung</a></li>
         <li><a href="#Speisen">Speisen</a></li>
+        <li><a href="wunschgericht.php" >Wunschgericht vorschlagen</a></li>
         <li><a href="#Zahlen">Zahlen</a></li>
         <li><a href="#Kontakt">Kontakt</a></li>
         <li><a href="#Wichtig">Wichtig für uns</a></li>
@@ -56,15 +57,28 @@
             </tr>
             </thead>
             <tbody>
+
+
             <?php
+
+
+
+
 
             /**$count ist die Anzahl der vorhandenen Speisen unten im Bereich: Zahlen*/
             $count = 0;
 
             /** Abrufen der Datenbank */
-            require_once "./connection.php";
+            require_once ("connection.php");
+
+
+
+
+
+
 
             $sql = "select id,name,preis_intern,preis_extern from gericht order by name;";
+
 
             $table = $con->query($sql) or die($con->connect_error);
             /** $con wird in connection.php deklariert*/
